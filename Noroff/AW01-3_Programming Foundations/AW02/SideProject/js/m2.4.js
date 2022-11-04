@@ -6,12 +6,13 @@ function getRandomInt(min, max) {
 }
 
 const tableCount = 15;
-
-let tableSizes = Array.from(Array(tableCount).keys()).map( () => getRandomInt(1, 11)); //declares how many people can seat at table of certain index
 const customers = [];
+
+let tableSizes = Array.from(Array(tableCount).keys()).map( () => getRandomInt(2, 10)); //declares how many people can seat at table of certain index
 let sneakyAttackId = 0;
 let memory  = 0;
 
+console.log(tableSizes);
 // I will periodicly print the current Custumers to the Console
 console.log(setInterval(() => {
     if(memory != customers.length){
@@ -26,11 +27,9 @@ console.log(setInterval(() => {
 function newCustomer() {
     // Prompt usr for a Name
     const name = prompt("Hello, what is your name?");
-    // console.log(name);
 
     let size = 0;
     let askAboutTableSize = "";
-    
 
 // Prompt usr for number of people
     while(true) {
@@ -40,9 +39,8 @@ function newCustomer() {
         else {
             askAboutTableSize = "Unfortunately we don't have a table for that many people. Please ask the smaller table size.";
         }
-        
+
         size = parseInt(prompt(askAboutTableSize));
-        // console.log(size);
 
         if(size != 0 && Math.max(...tableSizes) >= size) {
             break;
@@ -50,7 +48,7 @@ function newCustomer() {
     }
     
     let tableNumber = 0;
-    
+
     if (tableSizes.indexOf(size) >= 0) {
         tableNumber = tableSizes.indexOf(size);
     }
@@ -58,10 +56,37 @@ function newCustomer() {
         tableNumber = tableSizes.indexOf(Math.max(...tableSizes));
     }
 
+    // there are some customers
+    if (customers.length > 0){
+        let tableTaken = false;
+
+        // Check currently seated tables
+        for (let i = customers.length -1; i >= 0; i--){
+            if (customers[i][1] == tableNumber) {
+                tableTaken = true;
+                break;
+            }
+        }
+
+        // table is taken
+        if (tableTaken) {
+            alert("All tables are taken, Wait to be seated!");
+        } 
+        // table is not taken
+        else {
+        alert("You got table number: " + tableNumber + ", which by default can fit " + tableSizes[tableNumber] + " people.");
+        
+        customers.unshift([name, tableNumber, size]);
+        }
+    }
+    // Ther is no Customers
+    else {
+    console.log("Empty Restaurant");
     alert("You got table number: " + tableNumber + ", which by default can fit " + tableSizes[tableNumber] + " people.");
 
     customers.unshift([name, tableNumber, size]);
-    //console.log(customers);
+    }
+
 }
 
 // Generates an uniteligble Name
@@ -79,11 +104,37 @@ function stopSneakyAttack() {
 // Starts random assignment of customers
 function sneakyAttack() {
     sneakyAttackId = setInterval(() => {
-        customers.push([randomName(), getRandomInt(0, tableSizes.length)]);
+        
+        let tableNumber = getRandomInt(0, tableSizes.length);
+        
+        if (customers.length > 0){
+                let tableTaken = false;
+        
+                // Check currently seated tables
+                for (let i = customers.length -1; i >= 0; i--){
+                    if (customers[i][1] == tableNumber) {
+                        tableTaken = true;
+                        break;
+                    }
+                }
+                // Try a new table
+                if (tableTaken) {
+                    tableNumber = getRandomInt(0, tableSizes.length);
+                    console.log('Grrrrr!! ' + tableNumber);
+                }
+                else {
+                    customers.push([randomName(),tableNumber, 1 ]);
+                    console.log('Shhhhhh');
+                    return;
+                }
+
+            }
+        else {
+        customers.push([randomName(),tableNumber, 1 ]);
         console.log('Shhhhhh');
         return;
+        }
         }, 3000);
-    //    console.log();
 }
 
 // Clears the spesified table (array index)
@@ -101,3 +152,6 @@ function freeTable() {
     }
 }
 
+function getTableNumber() {
+
+}
