@@ -40,7 +40,7 @@ document.addEventListener("keydown", event => {
     both = 0;
 });
 
-setInterval(() => {
+var blocks = setInterval(() => {
     let blockLast = document.getElementById("block"+counter-1);
     let holeLast = document.getElementById("block"+counter-1);
     let random = Math.floor(Math.random() * 360);
@@ -71,14 +71,41 @@ setInterval(() => {
         currentBlocks.push(counter);
         counter++;
     }
-    
+
+    var characterTop = parseInt(window.getComputedStyle(character).getPropertyValue("top"));
+    var characterLeft = parseInt(window.getComputedStyle(character).getPropertyValue("left"));
+    var drop = 0;
+
+    if (characterTop <= 0) {
+        alert('Game Over! \n Score: ' + (counter - 9));
+        clearInterval(blocks);
+        location.reload();
+    }
+
     for(let i = 0; i < currentBlocks.length; i++){
         let iblock = document.getElementById("block" + currentBlocks[i]);
         let ihole = document.getElementById("hole" + currentBlocks[i]);
-        let iblockTop = parseFloat(window.getComputedStyle(iblock).getPropertyValue("top"));
+        var iblockTop = parseFloat(window.getComputedStyle(iblock).getPropertyValue("top"));
 
         iblock.style.top = iblockTop - 0.5 + 'px';
         ihole.style.top = iblockTop - 0.5 + 'px';
-    }
 
+        if ( iblockTop < -20){
+            iblock.remove();
+            ihole.remove();
+        }
+        if (iblockTop-20 <characterTop && iblockTop > characterTop){
+            drop++;
+    
+            if (iholeLeft <= characterLeft && (iholeLeft + 20) >= characterLeft){
+                drop = 0;
+            }
+        }
+    }   
+    if (drop == 0 && characterTop < 480){
+        character.style.top = characterTop + 2 + "px";
+    }
+    else {
+        character.style.top = characterTop - 0.5 + "px";
+    }
 },1);
