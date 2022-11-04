@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="nn">
+    <head>
+        <title>AW01 - AW03</title>
+
+        <meta content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="/Noroff/css/default.css">
+
+        <script src="js/m1.4.js"></script>
+    </head>
+    <header>
+        <h1>Studie start</h1>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Heim</a></li>
+                <li><a href="./index.html">Studie start</a></li>
+                <li><a href="./aw01.html">Første Veke</a></li>
+                <li><a href="./aw02.html">Andre Veke</a></li>
+                <li><a href="./aw03.html">Tredje Veke</a></li>
+            </ul>
+        </nav>
+    </header>
+    <body>
+        <main>
+            <h2>AW01 - Veke 1 (24.Oct.22)</h2>
+            <p>Veldig basic periode, som omhandlar mest introduksjon, instalasjon av VS-Code + exstensions, git og basic HTML.</p>
+            <p>Akkurat no så er alt du ser basert på min eksisterende kunskap om HTML, CSS og JS. Som dog er Litt, mindre og "um, java .. script?"</p>
+            <section name="module1.1" class="module">
+                <h3>Module 1.1 introduction</h3>
+                <article class="script">
+                    <h4>Script</h4>
+                    <script>
+                        document.write("Hello World!"+ "<br>");
+                    </script>
+                    <script src="js/AW01/hello.js"></script>
+                    <h5>End of Script</h6>
+                </article>
+                <article class="thetask">
+                    <h3>The Task</h3>
+                    <h4>Part 1</h4>
+                        <p> We installed a text editor for web development in this lesson and created our first web application. <br>
+                        The task for this lesson is very similar to what we have already done. You are asked to create a new website that shows three sentences. <br>
+                        The first sentence says, ‘I am sentence number 1 and I was printed without JS.’ It should be displayed without using JavaScript. <br>
+                        The second sentence says, ‘I am sentence number 2 and I was printed with JS from the HTML file.’ It should be displayed with JavaScript but within an HTML file. <br>
+                        The third sentence says, ‘I am sentence number 3 and I was printed with JS from a js file.’ It should be displayed with the use of a separate JavaScript file. <br>
+                        All three sentences need to be displayed on the same page. When you open your HTML file in the browser, what is the order of the sentences? <br>
+                        To complete this task, you are asked to perform desktop research to find out why sentences have been displayed in a given order and communicate your findings in a short report written in a Word document.<br>
+                        Your report should contain print screens of your code, print screens of your website, information about files that were created in Visual Studio Code and other relevant information.<br>
+                        Sentence order depends on the order of the sentences in the HTML source code. The sentences earlier in the source code will also be earlier on the website. It doesn’t depend on how we add them.<br>
+                        </p>
+                        <h4>Part 2</h4>
+                        <p>This lesson discussed the basics of variables, data types and operators. </p>
+                        <p>Practice what you have learned, by deriving the results of the following expressions (without JavaScript).</p>
+                        <br>
+                        <a href="AW01/aw01_thetask.html">My solution</a>
+                </article>
+            </section>
+            <section name="module1.2" class="module">
+                <h3>Module 1.2 Lesson</h3>
+                <p>String operatørar, Booleans, If-statment, Switch, ternary.</p>
+                <article id="script">
+                    <h3>Script</h3>
+                    <script src="js/AW01/m1.2.js"></script>
+                    <h5>End of Script</h6>
+                </article>
+                <article class="thetask">
+                    <h3>The Task</h3>
+                    <p>
+This lesson taught us about strings and the operations we can perform on them. We also discussed extracting substrings and searching for phrases within a string.<br>
+<br>
+In this task, we have a string:<br>
+<code>text = "My favourite book is \"Harry Potter\". I love this book so much.";</code><br>
+You are asked to create the following strings using the variable text and the operators we discussed:<br>
+<br>
+resultText1: favourite book is “Harry Potter”<br>
+resultText2: My book is love.<br>
+resultText3: My book is “HARRY POTTER”.<br>
+resultText4: potter harry<br>
+<br>
+Try to minimise the number of variables you use, but try not to perform all the operations in one line.<br>
+                    </p>
+                    <a href="AW01/aw01.2_thetask.html">My solution</a>
+                </article>
+            </section>
+            <section name="module1.3" class="module">
+                <h3>Module 1.3 Lesson</h3>
+                <p>Alerts and debugging</p>
+                <p>Alerts, prompts, comment "//single line" & "/*multiline */", arrays: 2d/3d</p>
+                <article class="script">
+                    <h3>Script</h3>
+                    <script src="js/AW01/m1.3.js"></script>
+                    <h5>End of Script</h6>
+                </article>
+                <article class="activity">
+                    <h3>ACTIVITY</h3>
+                    <p>Create an array containing your name, age and the name of your favourite colour. Print this in the console.</p>
+                    <script>
+                        const activityArray = ["Andreas N.", 32, "It's colors."];
+                        console.log("Activity 3 output: " + activityArray[0] + " | " + activityArray[1] + " | " + activityArray[2]);
+                        document.write("Check the console log at \"F12\"");
+                    </script>
+                </article> 
+                <article class="thetask">
+                    <h3>The Task</h3>
+                    <h3>Part 1</h3>
+                    <p>
+                        In this lesson, we learnt about debugging and communicating with a user. We saw why the browser’s developer tool is handy and how to use it. We also modified our code to interact with the user. 
+                        However, one of the tasks we did in this class wasn’t completed, specifically the one about prompts. What if the user passes the wrong value with the prompt?<br>
+                        <br>
+                        In this task, you must improve our code from this class:<br>
+                        <br>
+                        The number x should only be visible if x is equal to or greater than 0 while being equal to or less than 0.5. If x isn’t between 0 and 1, 
+                        you need to ask the user to pass the number again. If the new data is correct, the application behaves like now.
+                        <br>
+                        However, if the new data is also incorrect, you should create an alert with the text “Your data is not correct!” and don’t show any other alert. 
+                        You can use the parseFloat() method to parse the string to float number.
+                    </p>
+                    <h3>Part 2</h3>
+                    <p><br>
+                        In this lesson, we learnt about arrays. You should know how to modify the array’s elements and perform general operations.<br>
+                        <br>
+                        For this task, create an array containing 10 names of vegetables. At least one vegetable name should have an even length. 
+                        Using the iterator method, show the user an alert containing this name if the length of the vegetable name is even.<br>
+                    </p>
+                    <a href="AW01/aw01.3_thetask.html">My solution</a>
+                </article>
+            </section>
+            <section name="module1.4" class="module">
+                <h3>Module 1.4 Lesson</h3>
+                <p>Loops</p>
+                <p>Loops, for, for-in, while, Functions, arrow functions, binding functions to html</p>
+                <h4>Læringsmål</h4>
+                <pre><p>
+In this lesson, we are covering the following knowledge learning outcome:
+    - The candidate has knowledge of program syntax, program structure, control structures, data types, and variables as used in the JavaScript language.
+
+In this lesson, we are covering the following skill learning outcomes:
+    - The candidate can apply knowledge of browsers and development tools to set up a computer to develop and debug small JavaScript programs.
+    - The candidate masters the use of relevant tools for writing, editing, and debugging JavaScript source code.
+
+In this lesson, we are covering the following general competence learning outcome:
+    - The candidate can carry out simple programming tasks with the JavaScript language.
+                </p></pre>
+                <article class="script">
+                    <h3>Script</h3>
+                    <script src="js/AW01/m1.4.js"></script>
+                    <p id="scriptUt"></p>
+                    <button style="width: 100px; height: 40px" onclick="increment()">increment</button>
+
+                    <h5>End of Script</h6>
+                </article>
+                <article class="activity">
+                    <h2>Activity's</h2>
+                    <h3>Activity 1</h3>
+                    <div>
+                        <p>
+                            Create an array containing 10 values. Print all of them using the for-loop.
+                        </p>
+                        <p id="aOut1"></p>
+                        <button style="width: 75px; height: 40px" onclick="assignment1()">Try Me</button>
+                    </div>
+                </article>
+                <article class="activity">
+                <h3>Activity 2</h3>
+                <div>
+                    <p>Create an array containing some numbers. Print all numbers from the array beginning until becoming a number which is a multiplicity of 7. 
+                        Print information that the first multiplicity of 7 has been found and get out of the loop. 
+                        To check whether the number is a multiplicity of 7, we can use the remainder operator (%).</p>
+                    <p id="aOut2"></p>
+                    <button style="width: 75px; height: 40px" onclick="assignment2()">Try Me</button>
+                </div>
+                </article>
+                <article class="activity">
+                <h3>Activity 3</h3>
+                <div>
+                    <p>Create an infinite loop and ask the user (via prompt) to pass an even number. 
+                        If the number was even, end the loop and show that number in the alert. Otherwise, show another prompt and ask for an even number again.
+                    </p>
+                    <button style="width: 75px; height: 40px" onclick="assignment3()">Try Me</button>
+                </div>
+                </article>
+                <article class="activity">
+                <h3>Activity 4</h3>
+                <div>
+                    <p>Declare and create a function that adds three numbers. Call this function and set the returned sum of numbers to a variable.</p>
+                    <p id="aOut4"></p>
+                    <button style="width: 75px; height: 40px" onclick="assignment4()">Try Me</button>
+                </div>
+                </article>
+                <article class="activity">
+                <h3>Activity 5</h3>
+                <div>
+                    <p>Write a function that multiplies all arguments (we assume all are numbers) and returns the result. 
+                        We should be able to pass as many arguments as we want.</p>
+                    <p id="aOut5"></p>
+                    <button style="width: 75px; height: 40px" onclick="assignment5()">Try Me</button>
+                </div>
+                </article>
+                <article class="activity">
+                <h3>Activity 6</h3>
+                <div>
+                    <p>Write a function expression that multiplies all arguments (we assume all are numbers) and returns the result. 
+                        We should be able to pass as many arguments as we want.
+                    </p>
+                    <p id="aOut6"></p>
+                    <button style="width: 75px; height: 40px" onclick="assignment6()">Try Me</button>
+                </div>
+                </article>
+                <article class="thetask">
+                    <h3>The Task</h3>
+                    <h3>Part 1</h3>
+                    <pre>
+In this lesson, we learnt about loops: for-loops, for-in loops, for-of loops, while-loops and how to interrupt them. To convert strings to numbers, use the parseFloat() method.
+
+This task is divided into two sections:
+Load the data from the user (via prompt). You should get a number greater than 1 but less than 20. If the data from the user is incorrect, you should show them another prompt repeatedly until you get the correct number.
+Print all multiplicities of these positive integer numbers in the console that are less than 1000 and not multiplicities of 23. Which loop is best for our task?
+<h3>Part 2</h3>
+In this lesson, we learnt about the functions, function expressions and arrow functions. We also finally used functions to improve our web application.
+
+In this task, we’ll continue the development of our web application:
+
+In the beginning, get the input value from the user. The value should be between 0 and 100. Create two buttons and apply two functions to them on click: one will increase the stored value by 1, while the second function will decrease it.
+
+After every button click, show the current variable value in the console. After reaching either 0 or 100, instead of increasing/decreasing the value, communicate “Game over” in the console.
+                </pre>
+                    <a href="AW01/aw01.4_thetask.html">My solution</a>
+                </article>
+            </section>
+        </main>
+    </body>
+    <footer>
+        <h4>I am in the Footer</h5>
+        <p>Maybe i'll write something here in the future</p>
+    </footer>
+</html>

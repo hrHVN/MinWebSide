@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="nn">
+    <head>
+        <meta content="text/html" charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <title>AW01 - AW03</title>
+
+        <link rel="stylesheet" href="../css/default.css">
+
+        <script src="js/AW02/m2.1.js"></script>
+        <script src="js/AW02/m2.2.js"></script>
+        <script src="js/AW02/m2.3.js"></script>
+    </head>
+    <header>
+        <h1>Veke 2 - Programerings Fundament</h1>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Heim</a></li>
+                <li><a href="index.html">Studie start</a></li>
+                <li><a href="aw01.html">Første Veke</a></li>
+                <li><a href="aw02.html">Andre Veke</a></li>
+                <li><a href="aw03.html">Tredje Veke</a></li>
+            </ul>
+        </nav>
+    </header>
+    <body>
+        <main>
+            <h2>AW01 - Veke 2 (31.Oct.22)</h2>
+            <p>dummy</p>
+            <section name="module2.1" class="module">
+                <h3>Module 2.1 Lesson</h3>
+                <p>Overskrift</p>
+                <p>OOP</p>
+                <h4>Læringsmål</h4>
+                <pre>
+                    <p>
+<h4>In this lesson, we are covering the following knowledge learning outcome:</h4>
+The candidate has knowledge of development and debugging within a web browser.
+
+<h4>In this lesson, we are covering the following skill learning outcomes:</h4>
+The candidate can apply knowledge of web browsers and development tools to set up a computer for use in developing and debugging small JavaScript programs.
+The candidate masters the use of relevant tools for writing, editing, and debugging JavaScript source code.
+
+<h4>In this lesson, we are covering the following general competence learning outcome:</h4>
+The candidate can carry out simple programming tasks with the JavaScript language.
+                    </p>
+                </pre>
+                <article class="script">
+                    <h4>Script</h4>
+                    <script src="">
+
+                    </script>
+                    <h5>End of Script</h6>
+                </article>
+                <article class="activity">
+                    <h3>Activity 1.1</h3>
+                    <div>
+                        <p>
+                            Create a class named Student. It should have the properties: name, surname and age. It should also have two methods: the first one - greetings(), should return a string: “Hello my name is _insert_name_property_ _insert_surname_property_”.
+                            The second one should be called birthYear() and return the student's year of birth.
+
+                            Ask three classmates for the necessary data (or create dummy data if you prefer) and create four objects of the Student class. 
+                            The data of the fourth object should be your own. Print the results of greetings() and birthYear() methods for every object.
+                        </p>
+                        <p id="aOut1"></p>
+                        <button style="width: 75px; height: 40px" onclick="assignment1()">Oppgave 1</button>
+                    </div>
+                </article>
+                <article class="activity">
+                    <h3>Activity 1.2</h3>
+                    <div>
+                        <p>
+                            Create a basic class Pizza. 
+                            The pizza has a name and price. 
+                            It should also have an info() method which says, “I am basic pizza: _name_. I cost _price_.” 
+                            
+                            Create two subclasses: ItalianPizza and AmericanPizza.
+                            AmericanPizza has a sauce string property. 
+                            ItalianPizza has a region property, which determines where it comes from. 
+                            
+                            Their info() method should contain additional information about these properties.
+                        </p>
+                        <p id="aOut1.2"></p>
+                        <button style="width: 75px; height: 40px" onclick="toParagraph()">Oppgave 2</button>
+                    </div>
+                </article>
+                <article class="thetask">
+                    <h3>The Task</h3>
+                        <pre>
+In this lesson, we learned some crucial concepts of Object-oriented Programming. 
+We learned about classes, encapsulation and inheritance.
+
+In this task, you have to create a menu for a restaurant. 
+Every dish has a name and price. Our restaurant serves pizza, pancakes and pasta. 
+In addition, pizza has an array of ingredients, and pancakes have the Boolean sweet property, which defines whether pancakes should be served sweet. 
+Pasta has the Boolean property isVegetarian, which defines whether it contains meat.
+
+Create a model in Object-oriented Programming simulating the menu. 
+Think about which properties should be private and which not.
+                        </pre>
+                        <a href="AW02/aw02_thetask.html">My solution</a>
+                </article>
+            </section>
+            <section name="module2.2" class="module">
+                <h3>Module 2.2 Lesson</h3>
+                <p>Algorithms and Data structures</p>
+                <article class="leringsmål">
+                <p>Modul oppsumering</p>
+                <h4>Læringsmål</h4>
+                <pre>
+<h4>In this lesson, we are covering the following knowledge learning outcome:</h4>
+The candidate has knowledge of development and debugging within a web browser.
+
+<h4>In this lesson, we are covering the following skill learning outcomes:</h4>
+The candidate can apply knowledge of web browsers and development tools to set up a computer for use in developing and debugging small JavaScript programs.
+The candidate masters the use of relevant tools for writing, editing, and debugging JavaScript source code.
+
+<h4>In this lesson, we are covering the following general competence learning outcome:</h4>
+The candidate can carry out simple programming tasks with the JavaScript language.
+                </pre>
+                </article>
+                <article class="activity">
+                    <h3>Activity 2.1</h3>
+                    <div>
+                        <p>
+                            
+                        </p>
+                        <p id="aOut2.1"></p>
+                        <button style="width: 75px; height: 40px" onclick="assignment1()">Oppgave 1</button>
+                    </div>
+                </article> 
+                <article class="thetask">
+                    <h3>The Task</h3>
+                    <h4>Part 2</h4>
+                        <p>
+                            In this lesson, we learned about new data structures. We also learned what an algorithm is and gained insight into three basic sorting algorithms. We saw that JavaScript offers a good alternative – a sort() function.
+
+                            In this task, you’ll have to sort the numbers, but to make it more interesting, you won’t sort them from smallest to greatest. First, you need to get two numbers from the user. You can use prompts to do that. Both need to be positive integers. The bigger one defines the size of your array.
+                            
+                            We can generate the array of the provided size this way:
+                            <code> numbers = Array.from(Array(10).keys()); // [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]</code>
+                            We want to sort all elements by the remainder when dividing by the second, smaller parameter. If the remainder is the same for two numbers, the smaller one should be before the greater one. We can get the remainder through the modulo operator:
+                            <code>(11%4); // 3</code>
+                            Our sorted array will look this way for the size of the array equal to 10 and second parameter 3
+                            <code>[0, 3, 6, 9, 1, 4, 7, 2, 5, 8]</code>
+                            Please print the result in the console.
+                            
+                            You should implement sorting in two ways:
+                            Using any of the basic sorting algorithms mentioned in this lesson or any other sorting algorithm found on the Internet that is no less optimal.
+                            Using the sort() method.
+                        </p>
+                        <a href="AW02/aw02.2_thetask.html">AW 2.2 Sorting algorithms</a>
+                </article>
+            </section>
+            <section name="module2.3" class="module">
+                <h3>Module 2.3 Lesson</h3>
+                <p>Basic asynchronous operations</p>
+                <p>Modul oppsumering</p>
+                <h4>Læringsmål</h4>
+                <pre>
+<h4>Learning outcomes</h4>
+    In this lesson, we are covering the following knowledge learning outcome:
+    The candidate has knowledge of development and debugging within a web browser.
+
+    In this lesson, we are covering the following skill learning outcomes:
+    The candidate can apply knowledge of web browsers and development tools to set up a computer for use in developing and debugging small JavaScript programs.
+    The candidate masters the use of relevant tools for writing, editing, and debugging JavaScript source code.
+    
+    In this lesson, we are covering the following general competence learning outcome:
+    The candidate can carry out simple programming tasks with the JavaScript language.
+                </pre>
+                <article class="activity">
+                    <h3>Activity 2.3</h3>
+                    <div>
+                        <p>
+                            Pass a second callback function to the calculator, which divides the result by two and invokes it between result calculation and result printing.
+                        </p>
+                        <p name="ac23" id="ac23">It's supposed to print somthing here, but if it don't the bloody <code>document.GetElementById()</code> is brikked! </p>
+                        <button style="width: 75px; height: 40px" onclick="assignment1()">Oppgave 1</button>
+                    </div>
+                </article> 
+                <article class="thetask">
+                    <h3>The Task</h3>
+                    <h4>Part 2</h4>
+                        <pre>
+In this lesson, we learned about basic asynchronous operations in JavaScript. Now we know what callbacks, timeouts and intervals are. We can also create asynchronous code with promises.
+
+In this task, you’ll create a number guessing game. You have to get the number from the user (via prompt) and check if the number is the same as the one you hardcoded in the JavaScript file. If the values differ, you should ask the user again after 10 seconds. If the values are the same, you should end the game and congratulate the user with an alert.
+                        </pre>
+                        <a href="AW02/aw02.3_thetask.html">My solution</a>
+                </article>
+            </section>
+            <section name="module2.4" class="module">
+                <h3>Module 2.4 Lesson</h3>
+                <p>Revision</p>
+                <p>Modul oppsumering</p>
+                <h4>Læringsmål</h4>
+                <pre>
+<h4>Learning outcomes</h4>
+In this lesson, we are covering the following knowledge learning outcome:
+The candidate has knowledge of development and debugging within a web browser.
+
+In this lesson, we are covering the following skill learning outcomes:
+The candidate can apply knowledge of web browsers and development tools to set up a computer for use in developing and debugging small JavaScript programs.
+The candidate masters the use of relevant tools for writing, editing, and debugging JavaScript source code.
+
+In this lesson, we are covering the following general competence learning outcome:
+The candidate can carry out simple programming tasks with the JavaScript language.
+                </pre>
+                <article class="activity">
+                    <h3>Activity 2.3</h3>
+                    <div>
+                        <p>In the first part, we’ll add new customers to our restaurant. The customer gives their name and asks about a table of a specific size. If we have a table of this size, we should tell them its identifier and add them to our customer’s array. Otherwise, we should ask them about providing a smaller size until we get the correct one.</p>
+                        <p>In this section, we’ll enable the attack of sneaky customers. A sneaky customer sits at a random table without us noticing. We’ll add two buttons: one to enable and one to disable the sneaky customer’s attack. If enabled, one random customer with a random name will sit at a random table every 30 seconds. Every time a new sneaky customer is added, we should print “Shhhhhhhh” in the console.</p>
+                        <p>If we only add new customers, our restaurant will get too crowdy. In this section, we’ll implement a tool to free a table. We want to remove all customers from the table of a provided index. We get the index via prompt as often as necessary until it’s in the correct format.</p>                                                
+                        <button><a href="AW02/SideProject/aw04.html">Gå il prosjekt side</a></button>
+                    </div>
+                </article> 
+                <article class="thetask">
+                    <h3>The Task</h3>
+                    <h4>Part 2</h4>
+                        <pre>
+In this lesson, we learned about basic asynchronous operations in JavaScript. Now we know what callbacks, timeouts and intervals are. We can also create asynchronous code with promises.
+
+In this task, you’ll create a number guessing game. You have to get the number from the user (via prompt) and check if the number is the same as the one you hardcoded in the JavaScript file. If the values differ, you should ask the user again after 10 seconds. If the values are the same, you should end the game and congratulate the user with an alert.
+                        </pre>
+                        <a href="AW02/aw02.3_thetask.html">My solution</a>
+                </article>
+            </section>
+        </main>
+    </body>
+    <footer>
+        <h4>I am in the Footer</h5>
+        <p>Maybe i'll write something here in the future</p>
+    </footer>
+</html>

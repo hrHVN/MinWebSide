@@ -1,0 +1,1 @@
+document.write("I am sentence number 3 and was printed with JS frim a js file.");
