@@ -7,7 +7,7 @@ function getRandomInt(min, max) {
 
 const tableCount = 15;
 
-let tableSizes = Array.from(Array(tableCount).keys()).map( () => getRandomInt(2, 10)); //declares how many people can seat at table of certain index
+let tableSizes = Array.from(Array(tableCount).keys()).map( () => getRandomInt(1, 11)); //declares how many people can seat at table of certain index
 const customers = [];
 let sneakyAttackId = 0;
 let memory  = 0;
@@ -64,7 +64,7 @@ function newCustomer() {
     //console.log(customers);
 }
 
-// Generates an uniteligble Name or string
+// Generates an uniteligble Name
 function randomName() {
     return Math.random().toString(36).replace(/[^a-z]+/g, '').substring(0,5);
 }
