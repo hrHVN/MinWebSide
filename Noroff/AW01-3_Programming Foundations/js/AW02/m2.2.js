@@ -83,6 +83,7 @@ Array.prototype.w3BinaryRecursion = function(target) {
     else { return this.slice(0, half).w3BinaryRecursion(target);}
 }
 
+// Sorting algorithm.
 Array.prototype.w3MergeSort = function() {
     if (this.length <= 1) { return this; }
 
