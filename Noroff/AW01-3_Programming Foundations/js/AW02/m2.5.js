@@ -41,23 +41,30 @@ function logParam(parameter = 'logged to console') {
 }
 
 // 5# Write a function ‘MyStringFunction’ that takes a string and returns the number of characters in that string. (Make use of string.length).
-var test = "  hallo eg er ein lang streng med jevne mellom romm  ";
+//var test = "  hallo eg er ein lang streng med jevne mellom romm  ";
 
 function MyStringFunction(string) {
-    const tempArr = string.trim().split(' '); // Remove lead-/trailing whitespace and Make a list of all the words
-    console.log(tempArr);
+    // Remove lead-/trailing whitespace and Make a list of all the words
+    const tempArr = string.trim().split(' '); 
     let newstring = '';
 
     // Make a new string with all the words, no spaces or seperators.
     for (let i = 0; i < tempArr.length - 1; i++) {
         newstring += tempArr[i];
     }
-    console.log(newstring);
     return newstring;
 }
 
 // 6# Write a function ‘Upper’ that takes a string and returns the uppercase of the string.
 
+function upper(stringCase){
+    //defines the range of letters to scan
+    const regex = /[A-Z]/;
+    // .match() returns an array of "matches"
+    let myUpper = stringCase.match(regex);
+    // returns the first instance of 'upper'
+    return myUpper[0];
+}
 
 // 7# Write a function ‘Add’ that takes two numbers and returns their sum.
 function sumTwo (a, b) {
@@ -66,41 +73,133 @@ function sumTwo (a, b) {
 
 // 8# Write a function ‘Modulo’ that takes a natural number and a dividend and returns the remainder of the modulo (%) of the two numbers.
 function modulo(number, divisor) {
-    return number % divisor;
+    return parseFloat(number % divisor);
 }
 
 // 9# Write a function ‘MinMax’ that finds the min and max numbers of an array of numbers.
 const minMax = (array) => {
-    let _array = array;
-    let max = 0;
-    let min = 0;
+    let max = array[0];
+    let min = array[0];
 
-    if (_array.length <= 1) {return _array;}
+    // I detemin if it is worth our time, and return default.
+    if (array.length <= 1) {return min, max;}
 
-    for (let i = 0; i < _array.length; i++){
-        for (let j = 0; j < _array.length; j++)
+    // I sort the arrray in ascending order
+    for (let i = 0; i < array.length; i++){  
+        for (let j = 0; j < array.length; j++) 
         {
-            if (_array[j - 1] < _array[j]){
-            let temp = _array[j - 1];
-            _array[j - 1] = _array[j];
-            _array[j] = temp;
+            if (array[j + 1] < array[j]){  
+            let temp = array[j + 1];            
+            array[j + 1] = array[j];         
+            array[j] = temp;                    
             }
         }
-        if (_array[i] > max) { max = _array[i];}
-        if (_array[i] < min) { min = _array[i];}
+        // If the current i-value is diffrent from array[0], update.
+        max = (array[i] > max) ? array[i]: max = max; 
+        min = (array[i] < min) ? array[i]: min = min; 
     }
-    console.log(_array + ' min ' + min + ' max ' + max);
+    // console.log(array + ' min ' + min + ' max ' + max);
     return min, max;
 }
 
-// 10# Write a function ‘Parse’ that takes a string (‘20’) and a number (5) and returns the multiplication of the string and the number (use the parseInt function to read the string as a number).
+// 10# Write a function ‘Parse’ that takes a string (‘20’) and a number (5) and returns the multiplication of the string and the number 
+// (use the parseInt function to read the string as a number).
+
+function parse( string, number){
+    return number * parseInt(string);
+}
+
 // 11# Write a function that accepts two numbers and checks if the numbers are equal. After the condition is checked, log an appropriate message to the console.
+function isEqual( num1, num2) {
+    let wtf = (num1 == num2) ? console.log('They are equal in som regards..') : console.log('Not really a match is it!');
+}
+
 // 12# Write a function ‘toArray’ that accepts four values and returns an array of these values.
+function toArray(val1, val2, val3, val4){
+    const _array = [];
+    _array.push(val1);
+    _array.push(val2);
+    _array.push(val3);
+    _array.push(val4);
+    return _array;
+}
+
 // 13# Write a function ‘ArrayLength’ that takes an array of values and returns the array’s length.
+function arrayLength(array) {
+    return array.length;
+}
 // 14# Write a function ‘ArraySort’ that takes an array of values and returns a sorted array. (Make use of the sort() function).
+function arrayJsSorting(valueInn) {
+    let isObject = [];
+    let isArray = [];
+    let isInt = [];
+    let isStr = [];
+
+    // check each element for type and sort
+    for(let i = 0; i < valueInn.length; i++) {
+        if (typeof valueInn[i] === 'object'){ isObject.push(valueInn[i])}
+        if (Array.isArray(valueInn[i])){ isArray.push(valueInn[i])}
+        if (typeof valueInn[i] == 'number'){ isInt.push(valueInn[i])}
+        if (typeof valueInn[i] === 'string'){ isStr.push(valueInn[i])}
+    };
+    
+    //Sort every element by acending order (1-9)
+    isInt.sort(function(a,b){return a - b; });
+    isStr.sort((a, b) => a - b );
+    isObject.sort(function(a,b){return a.name - b.name});
+    isArray.sort((a, b) => a - b )
+
+    //Make one bigg array!
+    const sortedValueInn = isInt.concat(isStr).concat(isArray).concat(isObject);
+    //console.log(sortedValueInn);
+    return sortedValueInn;
+}
 // 15# Create a js file containing a line comment and a multiline comment/block comment.
+            /*
+            MultiLine Comment
+            */
 // 16# Write a function ‘MyForLoop’ that loops until a variable equals 10. The variable should be incremented by ‘1’ in each iteration. (Make use of the for-loop).
-// 17# Write a function ‘MyWhileLoop’ that declares a variable set to ‘10’ and loops until that variable is equal to ‘0’. The variable should be decremented by ‘1’ in each iteration. (Make use of the while-loop).
+const myForLoop =() => {
+    let end = 10;
+    for (let i = 0; i< end; i++){
+        console.log('i am looping ', i);
+    }
+}
+
+// 17# Write a function ‘MyWhileLoop’ that declares a variable set to ‘10’ and loops until that variable is equal to ‘0’. 
+//The variable should be decremented by ‘1’ in each iteration. (Make use of the while-loop).
+
+const myWhileLoop = () => {
+    let cya = 10;
+    while(true) {
+        if (cya == 0) { console.log('exit loop'); return;} //Brakes the loop if true
+        //console.log(cya);
+        cya--;
+    }
+}
+
 // 18# Write a function that checks if a given value is a number. (Make use of the isNan() funtion). Return a Boolean of the result.
-// 19# Write a function ‘SplitFunction’ that accepts the string ‘7+12+100’ and splits it into individual values, then summing these values. (Make use of the split() and parseInt() functions). Return the summed result.
+function iAmFalse(number) {
+    return isNaN(number);
+}
+// 19# Write a function ‘SplitFunction’ that accepts the string ‘7+12+100’ and splits it into individual values, then summing these values. 
+//(Make use of the split() and parseInt() functions). Return the summed result.
+function splitFunction(wierdString){
+    const tempArr = wierdString.split('+');
+    let sum = 0;
+    for (let i = 0; i < tempArr.length; i++){
+        sum += parseInt(tempArr[i]);
+    }
+    return sum;
+}
+
 // 20# Write a function ‘Factorial’ that accepts a positive integer and calculates the factorial of that integer. Return the result.
+
+function factorial(input){
+    let sum = 1;
+    // eks input = 5 => sum = 5*4*3*2*1 = 120
+    for (let i = input; i != 1; i--){
+        sum *= i;
+    }
+    return sum;
+}
