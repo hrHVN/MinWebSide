@@ -1,12 +1,48 @@
-.activity1 {
+* {
+    margin: auto;
+    max-width: 95%;
+}
 
+.activity1 p {
+    display: flexbox;
+    border-bottom: .2em solid green;
+    margin: 0 .5em .5em 0;
+    padding: .3em .6em;
 }
-.activity2 {
-    
+
+.activity1 #para1 {
+    border-style: dashed solid;
+    border-width: .3em .15em;
 }
-.activity3 {
-    
+
+.activity1 #para2 {
+    border-style: dotted;
+    border-width: .15em;
 }
-.activity4 {
-    
+
+.activity1 #para3 {
+    border-style: solid;
+    border-width: .1em;
 }
+
+.activity1 #para4 {
+    border-style: groove;
+    border-width: .3em;
+}
+/* .activity1 div {
+    width: 100px;
+    height: 100px;
+    background: red;
+    transition: width 2s, height 4s;
+}
+
+.activity1 div:hover {
+    width: 300px;
+    height: 300px;
+} */
+
+.activity2 {}
+
+.activity3 {}
+
+.activity4 {}

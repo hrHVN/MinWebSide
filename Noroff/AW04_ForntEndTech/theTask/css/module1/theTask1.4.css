@@ -1,0 +1,17 @@
+div {
+    background-color: aquamarine;
+    width: 10%;
+    float: left;
+    /* display: inline; */
+
+    padding: 1em 10% ;
+    border: .1em solid black;
+    border-radius: 10px;
+
+    transition: all 1.2s;
+}
+
+div:hover {
+    background-color: red;
+    padding: 1em 10% 4em 10%;
+}

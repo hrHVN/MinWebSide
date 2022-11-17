@@ -1,5 +1,23 @@
+nav {
+    background-color: aliceblue;
+    padding: 1em 0 .5em 0;
+}
+
+nav li {
+    display: inline;
+    margin: 1em;
+    text-align: center;
+    border: .1em solid purple;
+}
+
+#localNav {
+    background-color: lightgray;
+}
+
 .activity {
     border: 0.3em;
     border-color: aquamarine;
     border-style: solid;
+    margin: .2em 0 .3em 0;
+    padding: .15em;
 }
