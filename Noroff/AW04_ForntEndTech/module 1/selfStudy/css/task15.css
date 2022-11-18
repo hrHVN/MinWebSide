@@ -1,0 +1,15 @@
+.big {
+    font-size: 200%;
+}
+
+.green {
+    background-color: green;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}

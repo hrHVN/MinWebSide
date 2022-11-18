@@ -21,3 +21,30 @@ nav li {
     margin: .2em 0 .3em 0;
     padding: .15em;
 }
+
+section#module_article, article.learningoutcomes {
+    margin: .2em .5em;
+}
+
+section#module_article h2, h3, h4, h5 {
+    border-bottom: .1em solid burlywood;
+}
+
+section#module_article ol, ul {
+    max-width: 45%;
+}
+
+article.lessons {
+    display: inline-flex;
+    flex-wrap: wrap;
+    background-color: rgba(243, 243, 243, 0.247);
+}
+
+div.summary {
+    margin: 1em;
+    padding: 1em;
+    max-width: 20%;
+    min-width: 15em;
+    max-height: 15em;
+    overflow-y: auto;
+}

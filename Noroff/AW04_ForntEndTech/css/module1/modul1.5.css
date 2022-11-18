@@ -1,3 +1,4 @@
+
 ul {
     margin: .2em;
 }
@@ -12,4 +13,14 @@ div {
     margin: .2em;
     padding: .3em;
     background-color: antiquewhite;
+}
+
+article {
+    margin: .2em;
+    padding: .3em;
+}
+
+main {
+    margin: .2em;
+    padding: .3em;
 }
