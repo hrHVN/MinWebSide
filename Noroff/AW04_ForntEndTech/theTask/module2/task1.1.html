@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="para1">Size dosent matter</p>
+    <p id="para2">space ...</p>
+    <p id="para3">I am indecisive</p>
+
+    <script>
+        let dom1 = document.getElementById('para1');
+        let dom2 = document.getElementById('para2');
+        let dom3 = document.getElementById('para3');
+
+        let math = Math.random();
+
+        setInterval(() => {math = Math.random()},1000);
+
+        //para 1
+        setInterval(() => {
+            dom1.style.fontSize = (math >= 0.5) ? '150%' : '50%';
+        }, 5000);
+        
+        //para 2
+        setInterval(() => {
+            dom2.innerHTML = '.. Now: ' + Date();
+        },10000);
+        
+        //para 3
+        setInterval(() => {
+            if (math <= .33) {
+                dom3.style.backGroundColor = 'yellow';
+            }
+            else if (math > .33 && math <= .66) {
+                dom3.style.backgroundColor = 'magenta';
+            } else {
+                dom3.style.backgroundColor = 'cyan';
+            }
+        }, 3000);
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="showDetails()">Click me!</button>
+    <p id="demo"></p>
+    
+    <img src="https://i.pinimg.com/originals/c9/40/a3/c940a3dae3900d100990e5b697ef196c.jpg" alt="Pika Pika">
+    <img src="https://i.pinimg.com/originals/c9/40/a3/c940a3dae3900d100990e5b697ef196c.jpg" alt="Pika Pika">
+    <script>
+        document.getElementById('demo').innerHTML = 'Number of pictures: ' + document.images.length;
+        function showDetails(){
+            const doc = document.getElementsByTagName('img')[0];
+            let heigth = doc.clientHeight;
+            let width = doc.clientWidth;
+            let link = doc.currentSrc;
+
+            alert('height: ' + heigth + ' width: ' + width + '\n' + link);
+        }
+    </script>
+</body>
+
+</html>
