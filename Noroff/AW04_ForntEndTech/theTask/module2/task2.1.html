@@ -10,14 +10,26 @@
 
 <body>
     <script>
-        const dom = document.body();
+        var heding = document.createElement('h2');
+        heding.innerHTML = 'JavaScript HTML DOM';
 
-        var heding = document.createElement('h2').innerHTML('JavaScript HTML DOM');
-        dom.appendChild(heding);
-// document.createTextNode('Add a new HTML Element.');
-// document.createTextNode("This is new.");
-// document.createTextNode('This is a paragraph.');
-// document.createTextNode('This is another paragraph.');
+        let para1 = document.createElement('p');
+        para1.innerHTML = 'Add a new HTML Element.';
+
+        let para2 = document.createElement('p');
+        para2.innerHTML = "This is new.";
+
+        let para3 = document.createElement('p');
+        para3.innerHTML = 'This is a paragraph.';
+
+        let para4 = document.createElement('p');
+        para4.innerHTML = 'This is another paragraph.';
+        
+        document.body.appendChild(heding);
+        document.body.appendChild(para1);
+        document.body.appendChild(para2);
+        document.body.appendChild(para3);
+        document.body.appendChild(para4);
     </script>
 </body>
 
