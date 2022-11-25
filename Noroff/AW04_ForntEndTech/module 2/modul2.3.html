@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/frontend.css">
+    <title>Frontend Techonologies</title>
+</head>
+<header>
+    <h1>Frontend - Modul 2.3</h1>
+    <nav>
+        <ul>
+            <li><a href="../../index.html">Heim</a></li>
+            <li><a href="../FrontEndIndex.html">Frontend Home</a></li>
+            <li><a href="../modul1.html">Modul 1</a></li>
+            <li><a href="../modul2.html">Module 2</a></li>
+            <li><a href="../modul3.html">Module 3</a></li>
+        </ul>
+    </nav>
+    <nav>
+        <ul>
+            <li><a href="./modul2.1.html">Module 2.1</a></li>
+            <li><a href="./modul2.2.html">Module 2.2</a></li>
+            <li><a href="./modul2.3.html">Module 2.3</a></li>
+            <li><a href="./modul2.4.html">Module 2.4</a></li>
+            <li><a href="./modul2.5.html">Module 2.5</a></li>
+        </ul>
+    </nav>
+</header>
+
+<body>
+    <article class="summary">
+        <h2>Lesson 3 - JS Browser Object Model (p1)</h2>
+        <p>We already know how to interact with our HTML code when using HTML DOM. In this lesson, we’ll learn about a
+            new possibility: interacting with our browser. The Browser Object Model (BOM) provides us with the objects
+            that expose the web browser’s functionality.
+
+            In this lesson, we’ll focus on the window, screen, location, history and navigator objects. We’ll see how to
+            create various interactions with the user and gather fascinating user data.</p>
+
+        <h3>learning outcomes</h3>
+        <h4>In this lesson, we are covering the following knowledge learning outcomes:</h4>
+        <ul>
+            <li>The candidate has knowledge of concepts of the Document Object Model (DOM).</li>
+        </ul>
+
+        <h4>In this lesson, we are covering the following skill learning outcome:</h4>
+        <ul>
+            <li>The candidate can apply vocational knowledge of JavaScript to manipulate the Document Object Model (DOM)
+                and retrieve and display data from existing REST services in static web pages.</li>
+        </ul>
+
+        <h4>In this lesson, we are covering the following general competence learning outcome:</h4>
+        <ul>
+            <li>The candidate can carry out work based on the needs of a junior JavaScript developer.</li>
+        </ul>
+    </article>
+    <section class="module">
+        <div class="activity">
+            <h2>Activity 3.1</h2>
+            <p>With the use of BOM, create a new window. After five seconds, resize it. After another five seconds, move
+                it to the other place. After another five seconds, close it.</p>
+
+            <button onclick="spoofedWin()">Spoofed</button>
+            <script>
+                let aWindow;
+                function spoofedWin() {
+                    aWindow = window.open("http://localhost/", '_blank', 'width: 600, height: 400', false);
+
+                    //rezize window
+                    setTimeout(() => {
+                        aWindow.reziseTo(800, 1200);
+                    }, 1000);
+
+                    //Movement
+                    setTimeout(() => {
+                        aWindow.moveBy(100, 50);
+                    }, 2000);
+
+                    //closed
+                    setTimeout(() => {
+                        aWindow.close();
+                    }, 5000);
+                }
+
+            </script>
+
+        </div>
+        <div class="activity">
+            <h2>Activity 3.2</h2>
+            <p>Create the button that sets the current URL to https://google.com.</p>
+            <button onclick="goTo()">Im a trick</button>
+
+            <script>
+                function goTo() {
+                    confirm('You see, i did a trick')
+                    window.location.assign('https://www.google.com');
+                }  
+            </script>
+        </div>
+        <div class="activity">
+            <h2>Activity 3.3</h2>
+            <p>Create a button that navigates the user to five sites backwards in their history. If there are less than
+                five sites, navigate by max possible amount.</p>
+            <button onclick="goBack()">Go back, she said</button>
+
+            <script>
+                function goBack() {
+                    if (history.length > 5) {
+                        history.go(-5);
+                        return;
+                    }
+                    else {
+                        history.go(-(history.length - 1));
+                    }
+                }
+            </script>
+        </div>
+        <div class="activity">
+            <h2>Activity 3.4</h2>
+            <p>text</p>
+
+        </div>
+        <div class="The_Task">
+            <h2>The Task</h2>
+            <p>
+                In this lesson, we learned about the basics of the JS Browser Object Model, such as window, screen,
+                location or history. In this task, you need to create a website containing:
+            </p>
+            <ol>
+                <li>A button that creates a new window of width and height equal to 800px.</li>
+                <li> A button that makes the last window created two times smaller.</li>
+                <li>A button that shows an alert with the current URL after five seconds of clicking.</li>
+                <li>Back and next buttons (moving to previous/next card from the history).</li>
+            </ol>
+            <p>Note that when trying to display a URL, nothing will be displayed. This is because your page is local. If
+                you paste this code into another browser’s console that has a live web page open, it will work correctly
+                and display the URL of that web page.
+            </p>
+                <a href="../theTask/module2/task3.1.html" target="_blank"><button>The Task </button></a>
+            </div>
+    </section>
+</body>
+
+</html>

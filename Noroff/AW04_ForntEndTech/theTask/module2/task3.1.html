@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Task</title>
+</head>
+<body>
+    <button onclick="openWin()">New Window</button>
+    <button onclick="shrinkWin()">shrink The window</button>
+    <button onclick="alertMe()">alert you</button>
+    <button onclick="history.back()">Back</button>
+    <button onclick="history.go(1)">Forward</button>
+
+    <script>
+        let newWin;
+        function alertMe() {
+            alert(window.location);
+        }
+
+        function openWin(){
+            newWin = window.open("http://google.com/", '_blank', '600 600');
+        }
+
+        function shrinkWin() {
+            alert('This could work if it didnt encounter \"Same Origin Policy"')
+            // newWin.reziseTo(300,300);
+            newWin.close();
+        }
+    </script>
+</body>
+</html>
