@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>this is my <i>random</i> text with <i>no</i> meaning!</p>
+    <img src="https://cdn.pixabay.com/photo/2016/09/09/11/59/pokemon-1656997_960_720.png"
+        style="width: 240px; height:200px" alt="pika" onmouseover="randomFuncOn()" onmouseout="randomFuncOff()">
+
+    <script>
+        const tags = document.getElementsByTagName('i');
+
+        function randomFuncOn() {
+            for (let i = 0; i < tags.length; i++) {
+                tags[i].style.color = 'blue';
+            }
+        }
+
+        function randomFuncOff() {
+            for (let i = 0; i < tags.length; i++) {
+                tags[i].style.color = 'black';
+            }
+        }
+    </script>
+</body>
+
+</html>

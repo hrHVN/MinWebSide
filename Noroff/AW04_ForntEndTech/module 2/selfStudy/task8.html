@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body onload="selfUpdate()" onresize="selfUpdate()">
+    <button id="btn" onclick="btnFunct()">Try Me</button>
+
+    
+    <script>
+        function selfUpdate() {
+            let x = document.documentElement.clientHeight;
+            let y = document.documentElement.clientWidth;
+            console.log(`Height ${x}, width ${y}`);
+            btn.innerHTML = `Height ${x}, width ${y}`;
+        }
+
+        function btnFunct() {
+            btn.innerHTML = 'Try rezsing the window';
+        }
+    </script>
+</body>
+
+</html>

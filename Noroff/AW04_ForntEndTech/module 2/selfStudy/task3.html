@@ -1,17 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    <a href=""></a>
+    <p>
+        <a id="hrFL" href="https://www.darknetdiaries.com" type="text/html" target="_blank">link</a>
+    </p>
     <button onclick="hrF()">Try Me</button>
-    
+
     <script>
-        
+        function hrF() {
+            let dom = document.getElementById('hrFL');
+
+            alert(`Returning the values: \nhref: ${dom.href} \ntype: ${dom.type} \ntarget: ${dom.target}`)
+        }
     </script>
 </body>
+
 </html>

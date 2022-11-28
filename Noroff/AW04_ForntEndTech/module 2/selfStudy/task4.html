@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body> 
+    <button onclick="tableAdd()">Try Me</button>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Surname</th>
+            </tr>
+        </thead>
+
+        <tbody id="nameLess">
+            <tr>
+                <td>newName</td>
+                <td>newSurname</td>
+            </tr>
+        </tbody>
+
+    </table>
+
+    <script>
+        let num = 1;
+        function tableAdd() {
+            let table = document.getElementById('nameLess').insertRow(0);
+            let name = table.insertCell(0).innerHTML = `new Name ${num}`;
+            let sur = table.insertCell(1).innerHTML = `new Surname ${num}`;
+            num++;
+        }        
+    </script>
+</body>
+
+</html>

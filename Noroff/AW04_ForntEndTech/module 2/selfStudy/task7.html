@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="btn" onclick="remove()">Try Me</button>
+
+    <select id="myList">
+        <option value="">value 1</option>
+        <option value="">Value 2</option>
+        <option value="">Value 3</option>
+    </select>
+
+    <script>
+        const remove = () => {
+            let xyz = document.getElementById('myList');
+            xyz.remove(xyz.selectedIndex);
+        }
+    </script>
+</body>
+
+</html>

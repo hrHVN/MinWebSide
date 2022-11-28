@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="dough()">Try Me</button>
+
+    <table id="theTable">
+        <tr>
+            <th>name</th>
+            <th>surname</th>
+        </tr>
+        <tr>
+            <td>data 1</td>
+            <td>data 1.1</td>
+        </tr>
+        <tr>
+            <td>data 2</td>
+            <td>data 2.2</td>
+        </tr>
+        <tr>
+            <td>data 3</td>
+            <td>data 3.3</td>
+        </tr>
+    </table>
+
+    <script>
+        function dough() {
+            let text = prompt('Please enter the new text: ');
+            let coordinate = window.prompt('What cell to update? (row/cell 1/1)');
+
+            const rowCell = coordinate.split('/');         
+
+            let row = document.getElementById('theTable').rows[parseInt(rowCell[0], 10)].cells;
+            row[parseInt(rowCell[1] - 1 , 10)].innerHTML = text;
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="bulba" onclick="bulbaPic()">change Me</button>
+    <button id="pika" onclick="pickaPic()">Change me back</button>
+    <br>
+    <img id="ourPic" src="https://cdn.pixabay.com/photo/2016/09/09/11/59/pokemon-1656997_960_720.png"
+        style="width: 240px; height:200px;" alt="pokemons">
+
+    <script>
+        let image = document.getElementById('ourPic');
+
+        function bulbaPic() {
+            image.src = 'https://cdn.pixabay.com/photo/2018/04/13/16/13/pixel-3316924_960_720.png';
+            image.height = '220px';
+            image.width = '235px';
+            
+        }
+
+        function pickaPic() {
+            image.src = 'https://cdn.pixabay.com/photo/2016/09/09/11/59/pokemon-1656997_960_720.png';
+            image.width = '240px'; 
+            image.height ='200px';
+        }
+    </script>
+</body>
+
+</html>
