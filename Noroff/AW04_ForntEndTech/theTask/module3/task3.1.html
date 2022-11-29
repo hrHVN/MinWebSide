@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../../js/jquery-3.6.0.js"></script>
+    <title>The Task 3</title>
+</head>
+
+<body>
+    <div id="example">
+        <div>First paragraph.</div>
+        <p class="classA">The second paragraph.</p>
+        <p id="para3">The third paragraph.</p>
+        <div>The fourth paragraph.</div>
+        <p class="classA">The fifth paragraph.</p>
+    </div>
+    <button onclick="action1()">Button 1</button>
+    <button onclick="action2()">Button 2</button>
+    <button onclick="action3()">Button 3</button>
+
+    <script>
+       
+        const action1 = () => {
+            $('document').ready(function () {
+                $('#example > div:last').css('background-color', 'yellow');
+            });
+        }
+
+        const action2 = () => {
+            $('document').ready(function () { 
+                $('div:first').css('text-align', 'right');
+            });
+        }
+
+        const action3 = () => {
+            $('document').ready(function () {
+                $('p:even').css('font-size','20px');
+             });
+        }
+    </script>
+</body>
+
+</html>
