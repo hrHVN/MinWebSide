@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -71,12 +72,26 @@
     <section class="module">
         <div class="activity activity1">
             <h2>Activity 2.1</h2>
-            <p></p>
+            <p>In the following HTML file:</p>
+            <img src="../media/jQuery(part2)-1.png" alt="">
+            <p>Make our button double the first paragraph text and insert a copy of it after the button. After clicking
+                the button three times, we should see the following result:</p>
+            <img src="../media/jQuery(part2)-2.png" alt="">
+            <br>
+            <div id="example">
+                <p id="para1" class="classA">The first paragraph.</p>
+                <p class="classA">The second paragraph.</p>
+                <p class="classB" id="para3">The third paragraph.</p>
+                <p class="classB" id="para4" lang="en-us">The fourth paragraph.</p>
+                <p class="classA" id="para5" lang="en-gb">The fifth paragraph.</p>
+            </div>
+            <br>
             <button onclick="activity1()">Try Me</button>
 
             <script>
                 const activity1 = () => {
-
+                    $('p#para1').append($('p#para1').text());
+                    $(`<p>${$('p#para1').text()}</p>`).insertAfter('.activity1 button');
                 }
 
             </script>
@@ -88,9 +103,8 @@
 
             <script>
                 const activity2 = () => {
-
+                    
                 }
-                
             </script>
         </div>
         <div class="activity activity3">
@@ -99,10 +113,10 @@
             <button onclick="activity3()">Try Me</button>
 
             <script>
-                const activity3 = () => {
+    const activity3 = () => {
 
-                }
-                
+    }
+
             </script>
         </div>
         <div class="activity activity4">
@@ -111,14 +125,16 @@
             <button onclick="activity4()">Try Me</button>
 
             <script>
-                const activity4 = () => {
+                    const activity4 = () => {
 
-                }
-                
+                    }
+
             </script>
         </div>
     </section>
-<body>
-    
-</body>
+
+    <body>
+
+    </body>
+
 </html>
