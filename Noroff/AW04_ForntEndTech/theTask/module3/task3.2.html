@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../../js/jquery-3.6.0.js"></script>
+    <title>The Task 3.3</title>
+
+    <style>
+        a {
+            display: block;
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="example">
+        <p>First paragraph.</p>
+        <p class="classA">The second paragraph.</p>
+        <p id="para3">The third paragraph.</p>
+        <p>The fourth paragraph.</p>
+        <p class="classA">The fifth paragraph.</p>
+    </div>
+    <button onclick="action1()">Button 1</button>
+    <button onclick="action2()">Button 2</button>
+    <button onclick="action3()">Button 3</button>
+
+    <a href="http://www.youtube.com" target="_blank"></a>
+
+    <script>
+        function action1() {
+            $('#example').children().each((index, element) => {
+                let temp = $(element).text();
+                $(element).html(`<a href="https://www.youtube.com" target='_blank'>${temp}</a>`);
+            });
+        }
+
+        function action2() {
+            $('a').on("mouseenter", function (event) {
+                $(this).css('font-size', '20px');
+            });
+            $('a').on('mouseleave', function () {
+                $(this).removeAttr('style');
+            });
+        }
+
+        function action3() {
+            $('p').fadeOut('slow', 0);
+            $('button').slideUp();
+
+            setTimeout(() => {
+                $('p').show();
+                $('button').slideDown();
+
+                $('#example').children().each((index, element) => {
+                    let temp = $(element).text();
+                    $('a').removeAttr('href');
+                    $(element).html(`${temp}`);
+                });
+            }, 5000);
+        }
+    </script>
+</body>
+
+</html>
