@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Css -->
+    <link rel="stylesheet" href="/Noroff/css/bootstrap-5.0.2-dist/css/bootstrap.min.css">
+
+    <!-- JavaScript -->
+    <script src="/Noroff/js/jquery-3.6.0.js"></script>
+    <script src="/Noroff/AW04_ForntEndTech/module 4/selfStudy/task.js"></script>
+    <script src="/Noroff/css/bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+
+    <title>Document</title>
+</head>
+
+<body>
+    <button class="btn btn-md btn-outline-info" id="toastBtn" type="button" 
+    id="toastBtn">Activation</button>
+
+    <div class="toast hide" id="toastNote" role="alert" aria-live="assertive" 
+    aria-atomic="true">
+
+        <div class="toast-header">
+            <strong class="me-auto">TOAST NOTIFICATION</strong>
+            <button class="btn-close" aria-label="close" data-bs-dismiss="toast" 
+            type="button"></button>
+        </div>
+
+        <div class="toast-body">
+            <p class="text-success">The new toast notification!</p>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $('#toastBtn').click(function() {
+                $('#toastNote').toast('show');
+            })
+        });
+    </script>
+</body>
+
+</html>
