@@ -1,9 +1,33 @@
+import {innsertLocalNav} from '/Noroff/js/mainNav.js';
 
-function thisPageActive() {
-    // basic page parameters
-    let domListOfa = document.getElementsByTagName('a');
-    let thisUrl = document.URL;
-    let numLinks = domListOfa.length;
+const localNavTitles = [
+    {
+        button: 'JavaScript', url: '/module1/index.html', subDomains: [
+            { button: 'Your First Application', url: '/module1/modul1.html' },
+            { button: 'Strings', url: '/module1/modul2.html' },
+            { button: 'Alerts and Debugging', url: '/module1/modul3.html' },
+            { button: 'Loops', url: '/module1/modul4.html' },
+            { button: 'Self Study', url: '/module1/modul5.html' }
+        ]
+    },
+    {
+        button: '', url: '/module2/index.html', subDomains: [
+            { button: 'Classes', url: '/module2/modul1.html' },
+            { button: 'Basic Asynchronus Operations', url: '/module2/modul2.html' },
+            { button: 'Revision', url: '/module2/modul3.html' },
+            { button: 'Self Study', url: '/module2/modul5.html' }
+        ]
+    },
+    {
+        button: 'Course-Assignment', url: '/module5/index.html', subDomains: []
+    }
+];  
+    
+    function thisPageActive() {
+        // basic page parameters
+        let domListOfa = document.getElementsByTagName('a');
+        let thisUrl = document.URL;
+        let numLinks = domListOfa.length;
 
     // seperating urlString for identification of path
     const mainPageGrupe = thisUrl.split('/');
@@ -39,3 +63,7 @@ function thisPageActive() {
     }
 
 }
+
+$(document).ready(function() {
+    innsertLocalNav('/Noroff/programmingFoundations', localNavTitles);
+});
