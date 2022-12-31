@@ -39,9 +39,7 @@ function innsertMainNav() {
     for (let i = 0; i < 10; i++) {
         if (mainNavTitles[i].active) {
             $('ul#mainNavList').append(`<li>\
-            <a class="col" href="/Noroff${mainNavTitles[i].url}">\
-            ${mainNavTitles[i].button}\
-            </a></li>`);
+            <a class="col" href="/Noroff${mainNavTitles[i].url}">${mainNavTitles[i].button}</a></li>`);
         }
         else {
             break;
