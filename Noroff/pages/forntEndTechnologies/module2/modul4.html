@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- css -->
+    <!-- <link rel="stylesheet" href="/Noroff/frontEndTechnologies/css/frontend.css"> -->
+    <link rel="stylesheet" href="/Noroff/bootstrap-5.0.2-dist/css/bootstrap.min.css">
+
+    <title>Frontend Techonologies</title>
+</head>
+
+<body onload="startTime(); checkCookie()">
+    <article class="summary">
+        <h2>Lesson 4 - JS Browser Object Model (p2)</h2>
+        <p>We already know how to interact with our HTML code when using HTML DOM. In this lesson, we’ll learn
+            about a
+            new possibility: interacting with our browser. The Browser Object Model (BOM) provides us with the
+            objects
+            that expose the web browser’s functionality.
+
+            In this lesson, we’ll focus on the window, screen, location, history and navigator objects. We’ll
+            see how to
+            create various interactions with the user and gather fascinating user data.</p>
+
+        <h3>learning outcomes</h3>
+        <h4>In this lesson, we are covering the following knowledge learning outcomes:</h4>
+        <ul>
+            <li>The candidate has knowledge of concepts of the Document Object Model (DOM).</li>
+        </ul>
+
+        <h4>In this lesson, we are covering the following skill learning outcome:</h4>
+        <ul>
+            <li>The candidate can apply vocational knowledge of JavaScript to manipulate the Document Object
+                Model (DOM)
+                and retrieve and display data from existing REST services in static web pages.</li>
+        </ul>
+
+        <h4>In this lesson, we are covering the following general competence learning outcome:</h4>
+        <ul>
+            <li>The candidate can carry out work based on the needs of a junior JavaScript developer.</li>
+        </ul>
+    </article>
+
+    <section class="module">
+
+        <div class="activity">
+            <h2>Activity 4.1</h2>
+            <p>Open any website within a browser and, using the browser’s console, show an alert with the website’s
+                hostname.</p>
+
+            <button onclick="alertMe()">Swal alert</button>
+            <script>
+                function alertMe() {
+                    Swal.fire('alert(location.hostname) => ' + location.hostname);
+                }
+            </script>
+
+        </div>
+
+        <div class="activity">
+            <h2>Activity 4.2</h2>
+            <p>Create a cookie with your name (or dummy data).</p>
+
+            <p onclick="getCookie(tempCok)">text</p>
+
+            <h2>JavaScript Clock</h2>
+            <div id="txt"></div>
+            <script>
+                let tempCok = document.cookie = "";
+                function startTime() {
+                    const today = new Date();
+                    let h = today.getHours();
+                    let m = today.getMinutes();
+                    let s = today.getSeconds();
+                    m = checkTime(m);
+                    s = checkTime(s);
+                    document.getElementById('txt').innerHTML = h + ":" + m + ":" + s;
+                    setTimeout(startTime, 1000);
+                }
+                function checkTime(i) {
+                    if (i < 10) { i = "0" + i };
+                    return i;
+                }
+
+                function getCookie(cname) {
+                    let name = cname + "=";
+                    let decodedCookie = decodeURIComponent(document.cookie);
+                    let ca = decodedCookie.split(';');
+
+                    for (let i = 0; i < ca.length; i++) {
+                        let c = ca[i];
+
+                        while (c.charAt(0) == ' ') {
+                            c = c.substring(1);
+                        }
+                        if (c.indexOf(name) == 0) {
+                            return c.substring(name.length, c.length);
+                        }
+                    }
+                    return "";
+                }
+            </script>
+        </div>
+
+        <div class="activity">
+            <h2>Activity 4.3</h2>
+            <p>Open any significant website and open the browser’s console. Copy all three functions and paste them into
+                the console. Run the checkCookie() method twice and then log the document.cookie object.</p>
+            <script>
+
+                function setCookie(cname, cvalue, exdays) {
+                    const d = new Date();
+                    d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+
+                    let expires = "expires=" + d.toUTCString();
+                    document.cookie = cname + '=' + cvalue + ';' + expires + ';path/';
+                }
+
+                function checkCookie() {
+                    let user = getCookie('username');
+                    if (user != ' ') {
+                        //alert(`Welcome Back ${user}`)
+                        console.log(`Welcome back ${user}`)
+                    } else {
+                        user = prompt('Please eneter your name for the cookieMonster: ', '');
+                        if (user != '' && user != null) {
+                            setCookie("username", user, 0.5);
+                        }
+                    }
+                }
+            </script>
+
+        </div>
+
+        <div class="activity">
+            <h2>Activity 4.4</h2>
+            <p>text</p>
+        </div>
+
+        <div class="The_Task">
+            <h2>The Task</h2>
+            <p>In this lesson, we learnt about pop-ups, timings and cookies. You must now create a program that will
+                create a cookie and change its value to a random number from 0 to 10 every 10 seconds.
+
+                Remember, our local programs can’t use cookies. You can check whether the code works properly by
+                entering any website using cookies (for example <a href="https://developer.mozilla.org/en-US/"> Mozilla
+                    Developer - MDN Web Docs</a>) and pasting your code
+                into the browser’s console. </p>
+            <a href="../theTask/module2/task2.4.html" target="_blank"><button>The Task</button></a>
+        </div>
+        </div>
+
+    </section>
+    <!-- JS -->
+    <script src="/Noroff/js/jquery-3.6.0.js"></script>');
+    <script src="/Noroff/bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
+    <script src="/Noroff/js/mainNav.js"></script>
+    <script src="/Noroff/pages/forntEndTechnologies/js/frontend.js"></script>
+</body>
+
+</html>

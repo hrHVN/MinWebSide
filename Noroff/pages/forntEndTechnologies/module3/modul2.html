@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- css -->
+    <!-- <link rel="stylesheet" href="/Noroff/frontEndTechnologies/css/frontend.css"> -->
+    <link rel="stylesheet" href="/Noroff/bootstrap-5.0.2-dist/css/bootstrap.min.css">
+
+    <title>Frontend Techonologies</title>F
+</head>
+<style>
+    .highlighted {
+        background-color: greenyellow;
+    }
+</style>
+
+<body>
+    <article class="summary">
+        <h2>Lesson 2 - jQuery part 2</h2>
+        <p>jQuery is one of the most popular, free, open-source JavaScript libraries, enabling us to handle everyday
+            tasks with significantly smaller code. It provides us with multiple features from the topics we learned in
+            previous classes, such as HTML/DOM manipulation, CSS manipulation and animations. It also smooths
+            cross-browser development issues, as it runs the same in all major browsers.
+
+            In this lesson, we’ll learn how to set up the jQuery library. We’ll then focus on jQuery basics, such as
+            selecting the correct element with the CSS selector and getting connected to this element with our
+            document’s tree structure.
+
+            Even though there are many other JavaScript libraries, jQuery is probably the most popular and extendable.
+            We can even create our plugins with it, but we won’t learn about this in this lesson as it’s a more advanced
+            topic. This is why jQuery is used on the web by some of the biggest companies, such as Google, Microsoft,
+            IBM and Netflix.</p>
+
+        <h3>learning outcomes</h3>
+        <h4>In this lesson, we are covering the following knowledge learning outcomes:</h4>
+        <ul>
+            <li>The candidate has knowledge of concepts, processes, and tools for developing the JavaScript language.
+            </li>
+
+            <h4>In this lesson, we are covering the following skill learning outcome:</h4>
+            <ul>
+                <li>The candidate can find information and material relevant to extending JavaScript functionality
+                    in static web pages through third-party libraries.</li>
+            </ul>
+
+            <h4>In this lesson, we are covering the following general competence learning outcome:</h4>
+            <ul>
+                <li>The candidate can carry out work based on the needs of a junior JavaScript developer.</li>
+            </ul>
+    </article>
+
+    <section class="module">
+        <div class="activity activity1">
+            <h2>Activity 2.1</h2>
+            <p>In the following HTML file:</p>
+            <img src="../media/jQuery(part2)-1.png" alt="">
+            <p>Make our button double the first paragraph text and insert a copy of it after the button. After clicking
+                the button three times, we should see the following result:</p>
+            <img src="../media/jQuery(part2)-2.png" alt="">
+            <br>
+            <div id="example">
+                <p id="para1" class="classA">The first paragraph.</p>
+                <p class="classA">The second paragraph.</p>
+                <p class="classB" id="para3">The third paragraph.</p>
+                <p class="classB" id="para4" lang="en-us">The fourth paragraph.</p>
+                <p class="classA" id="para5" lang="en-gb">The fifth paragraph.</p>
+            </div>
+            <br>
+            <button onclick="activity1()">Try Me</button>
+
+            <script>
+                const activity1 = () => {
+                    $('p#para1').append($('p#para1').text());
+                    $(`<p>${$('p#para1').text()}</p>`).insertAfter('.activity1 button');
+                }
+
+            </script>
+        </div>
+        <div class="activity activity2">
+            <h2>Activity 2.2</h2>
+            <p>In the following HTML file:</p><br>
+            <img src="../media/jQuery(part2)-4.png" alt="">
+            <p>Create jquery_lesson.js file with: <br>
+                <li>An On button with an event that, when clicked, changes all paragraphs’ font size to 30px.</li>
+                <li>An Off button with an event that, when clicked removes the styling added by the On button event.
+                </li>
+            </p>
+
+            <p class="classA">The first paragraph.</p>
+            <p class="classA">The second paragraph.</p>
+            <p class="classB" id="para3">The third paragraph.</p>
+            <p class="classB" id="para4" lang="en-us">The fourth paragraph.</p>
+            <p class="classA" id="para5" lang="en-gb">The fifth paragraph.</p>
+
+            <button id="onButton">On</button>
+            <button id="offButton">Off</button>
+            <script>
+                $(function () {
+                    $('.activity2 #onButton').on('click', function () {
+                        $('.activity2 p').css('font-size', '30px');
+                    });
+                    $('.activity2 #offButton').on('click', function () {
+                        $('.activity2 p').removeAttr('style');
+                    });
+                });
+            </script>
+        </div>
+        <div class="activity activity3">
+            <h2>Activity 2.3</h2>
+            <p>In the following HTML file:</p>
+            <img src="../media/jQuery(part2)-6.png" alt="">
+            <p>Make our paragraph (paragraph 1) slowly fade to 0.1 on hover.</p>
+
+            <button id="hideButtonAc3">I hide stuff</button>
+            <button id="showButtonAc3">I undo stuff</button>
+
+            <p id="para1Ac3" class="para">paragraph 1</p>
+            <p class="para">paragraph 2</p>
+            <script>
+                $(function () {
+                    $('#showButtonAc3').on('click', function () {
+                        $('.activity3 p.para').slideDown('slow');
+                    });
+                    $('#hideButtonAc3').on('click', function () {
+                        $('.activity3 p.para').slideUp('slow');
+                    });
+                    $('#para1Ac3').on('mouseover', function () {
+                        $('#para1Ac3').fadeTo('slow', 0.1);
+                    });
+                    $('#para1Ac3').on('mouseleave', function () {
+                        $('#para1Ac3').fadeTo('slow', 1);
+                    });
+                });
+            </script>
+        </div>
+        <div class="The_Task">
+            <h2>The Task</h2>
+            <p>TIn this lesson, we learnt about more advanced jQuery features, such as creating new elements and
+                modifying existing ones, adding events, effects and animations. In this task, you need to develop
+                functionalities for three buttons based on the following HTML file:
+            </p>
+            <img src="../media/theTask3.3part1.1.png" alt="">
+            <ul>
+                <li>Button 1 – changes all paragraphs into links linking to <a href="">https://youtube.com</a> but
+                    keeping their current text.
+                </li>
+                <li>Button 2 – adds event to all links, making their font size 20px on hover.
+                </li>
+                <li>Button 3 – hides all paragraphs with the fade-out animation and all buttons with the slide-up
+                    animation.
+                </li>
+            </ul>
+            <a href="../theTask/module3/task3.2.html" target="_blank"><button>Task 1</button></a>
+        </div>
+    </section>
+
+    <!-- JS -->
+    <script src="/Noroff/js/jquery-3.6.0.js"></script>');
+    <script src="/Noroff/bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
+    <script src="/Noroff/js/mainNav.js"></script>
+    <script src="/Noroff/pages/forntEndTechnologies/js/frontend.js"></script>
+</body>
+
+</html>

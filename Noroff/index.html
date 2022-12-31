@@ -7,34 +7,73 @@
     <!-- css -->
     <!-- <link rel="stylesheet" href="/Noroff/frontEndTechnologies/css/frontend.css"> -->
     <link rel="stylesheet" href="./bootstrap-5.0.2-dist/css/bootstrap.min.css">
-    
 
-    <title>Portofolio og personlig utvikkling ved Noroff</title>
+
+    <title>A.Nesheim Studie Portofolio</title>
 </head>
 
-<body class="container-lg">
-    <div>
-        <h2>Framsida til Min erfaring med Noroff</h2>
+<body>
+    <hr>
+    <div class="container-sm mb-sm-0 mb-md-3">
+        <h2>Kvifor BED hjå Noroff</h2>
+        <p>Etter ein lengre periode med arbeidsløyse og vanskligheiter med å finne fast og stabilt arbeid, under og
+            etter Covid-19 (2020-22). Fann eg studiet ved Noroff. Eg valgte <a
+                href="https://www.noroff.no/index.php/studier/fagskole/backend-utvikling"
+                class="link-success">"Backend-utvikling"</a> studiet framfor <a
+                href="https://www.noroff.no/studier/fagskole/nettverk-it-sikkerhet" class="link-success">"Nettverk og IT-sikkerhet"</a>, då
+            eg ønsker ein større fleksibilitet i kva eg kan bruke utdanninga til.</p>
+        <p>Nettverk og IT-sikkerhet er interesangt då ethical-hacking og system organisering er meget interesangt, samt
+            alle og ein kvar mulighet til å fikkle med Linux. Denne sida er blandt anna hosta på ein gjennopliva Lenovo
+            laptop med Ubuntu server os, og nginx-docker container. (Mulig at du og ser denna sida på ein kubernetes
+            Rpi-node)
+        </p>
+        <p>Nettsida blir daglig oppdatert gjennom eit bash-script som henter siste oppdatering frå Git, docker-cp
+            commando inn i nginx sin ./www mappe, og restarter containeren etter alt er ferdig.</p>
+    </div>
+
+    <div class="container-sm mb-sm-0 mb-md-3">
+        <h2>Sjølvbeherskelse</h2>
         <p>For å få mest mulig ut av lærings løpet hjå Noroff, og sidan eg allerede kan litt om programering og
-            web-utvikkling, har eg bestemt meg for å
-            begrense koden min til å reflektere kvar vi er i utdanninga.</p>
+            web-utvikkling, har eg bestemt meg for å begrense koden min til å reflektere kvar vi er i utdanninga.</p>
+
         <p>Med det meinar eg, at eg ikkje skal implimentere meir avansert kode så lenge vi ikkje har blit fortalt om den
             i undervisninga.</p>
+        <p>Dette betyr og at oppsettet kan virke veldig uorganisert og frastøtende design messig. Men fokuset ligger på
+            å reflektere heilheita i studiet.</p>
     </div>
-    
+
     <!-- JS -->
-    <script src="./js/jquery-3.6.0.js"></script>
-    <script src="./bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
-    <script src="./js/mainNav.js"></script>
+    <script src="/Noroff/js/jquery-3.6.0.js"></script>
+    <script src="/Noroff/bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
+    <script src="/Noroff/js/mainNav.js"></script>
+    <hr>
 </body>
-<footer>
-    <h4>Browser Games</h4>
-    <p>Simple games made in JS, HTML & Css</p>
-    <ul>
-        <li><a href="./BrowserGames/BrowserGame/browserGame.html">Jump the Block</a></li>
-        <li><a href="./BrowserGames/FalingBall/fallingBallGame.html">Falling Ball Game</a></li>
-        <li><a href="./BrowserGames/Snake/snakeGame.html">Snake Game</a></li>
-    </ul>
+<footer class="container-md">
+    <div class="container-sm row">
+        <div class="container-md col-4">
+            <h4>Navigasjon</h4>
+            <br>
+            <ul class="list-group">
+                <li class="list-group-item"><a href="/Noroff/index.html">Framside Noroff Portofolio </a></li>
+                <li class="list-group-item invisible"><a href="/andreas/index.html">Framside CV</a></li>
+            </ul>
+        </div>
+        <div class="container-md col-4">
+            <h4>Browser Games</h4>
+            <p>Simple games made in JS, HTML & Css</p>
+            <ul class="list-group">
+                <li class="list-group-item"><a href="/BrowserGames/BrowserGame/browserGame.html">Jump the Block</a>
+                </li>
+                <li class="list-group-item"><a href="/BrowserGames/FalingBall/fallingBallGame.html">Falling Ball
+                        Game</a></li>
+                <li class="list-group-item"><a href="/BrowserGames/Snake/snakeGame.html">Snake Game</a></li>
+            </ul>
+        </div>
+
+        <div class="container-md col-4">
+            
+        </div>
+    </div>
 </footer>
 
 </html>

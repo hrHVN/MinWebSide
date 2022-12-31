@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- css -->
+    <!-- <link rel="stylesheet" href="/Noroff/frontEndTechnologies/css/frontend.css"> -->
+    <link rel="stylesheet" href="/Noroff/bootstrap-5.0.2-dist/css/bootstrap.min.css">
+
+    <title>Frontend Techonologies</title>
+</head>
+
+<body>
+    <article class="summary">
+        <h2>Lesson 2 - HTML basics</h2>
+    </article>
+
+    <main>
+        <section class="module">
+            <div class="activity">
+                <h2>Activity 2.1</h2>
+                <p>Create two buttons, one linking to the main YouTube page, the second showing an alert that we can
+                    click the first one to go to the main YouTube page.</p>
+                <a href="https://www.youtube.com" target="_blank"><button>Youtube</button></a>
+                <button onclick="warning()">It's a Trap</button>
+                <script>
+                    function warning() {
+                        alert('You actually ignored the STRONG hint, that this was a trap!?');
+                    }
+                </script>
+            </div>
+            <div class="activity">
+                <h2>Activity 2.2</h2>
+                <p>Add an image of the Google logo to our website, which links to the
+                    Google main page. You can find a link to the Google logo on the Internet
+                    or use <a href="https://cdn.pixabay.com/photo/2015/12/11/11/43/google-1088003_1280.png">this
+                        one</a>.</p>
+
+                <img height="100px" src="https://cdn.pixabay.com/photo/2015/12/11/11/43/google-1088003_1280.png"
+                    alt="google image">
+            </div>
+            <div class="activity">
+                <h2>Activity 2.3</h2>
+                <p>Create a list of your three favourite restaurants in order. Each restaurant should contain a list of
+                    two dishes it serves.</p>
+
+                <dl>
+                    <dt>Woods</dt>
+                    <dd>Pizza</dd>
+                    <dd>Burger</dd>
+                    <dt>The rest</dt>
+                    <dd>Poison with poison</dd>
+                    <dd>marinated poisoning</dd>
+                    <dt>Unorderer</dt>
+                    <dd>
+                        <ul>
+                            <li>list</li>
+                            <li>inside</li>
+                        </ul>
+                    </dd>
+                    <dd>
+                        <ul>
+                            <li>a</li>
+                            <li>dictionary </li>
+                            <li>list</li>
+                        </ul>
+                    </dd>
+                </dl>
+            </div>
+            <div class="activity">
+                <h2>Activity 2.4</h2>
+                <p>Add a new column to our table from the example - colour. Fill in all necessary data.</p>
+                <h2>Groceries</h2>
+                <table>
+                    <tr>
+                        <th>Name</th>
+                        <th>Weight (in kg)</th>
+                        <th>Price (in Euro)</th>
+                        <th>Colour</th>
+                    </tr>
+                    <tr>
+                        <td>Banana</td>
+                        <td>0.3</td>
+                        <td>2</td>
+                        <td>Yellow</td>
+                    </tr>
+                    <tr>
+                        <td>Apple</td>
+                        <td>0.1</td>
+                        <td>0.6</td>
+                        <td>Green</td>
+                    </tr>
+                    <tr>
+                        <td>Orange</td>
+                        <td>0.15</td>
+                        <td>0.8</td>
+                        <td>Orange</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="activity">
+                <h2>Activity 2.5</h2>
+                <p>Modify our example from the tables section so the headings have a yellow background, and their font
+                    is three times bigger than the default.</p>
+                <table>
+                    <tr style="background-color: yellow; font-size: 300%;">
+                        <th>Name</th>
+                        <th>Weight (in kg)</th>
+                        <th>Price (in Euro)</th>
+                        <th>Colour</th>
+                    </tr>
+                    <tr>
+                        <td>Banana</td>
+                        <td>0.3</td>
+                        <td>2</td>
+                        <td>Yellow</td>
+                    </tr>
+                    <tr>
+                        <td>Apple</td>
+                        <td>0.1</td>
+                        <td>0.6</td>
+                        <td>Green</td>
+                    </tr>
+                    <tr>
+                        <td>Orange</td>
+                        <td>0.15</td>
+                        <td>0.8</td>
+                        <td>Orange</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="activity">
+
+                <h4>Examples</h4>
+                <p>Normal text - This is a normal paragraph.</p>
+                <p>Normal text - <b>This is a bold paragraph.</b></p>
+                <p>Normal text - <strong>This is an important paragraph.</strong></p>
+                <p>Normal text - <i>This is an italic paragraph.</i></p>
+                <p>Normal text - <em>This is an emphasized paragraph.</em></p>
+                <p>Normal text - <mark>This is a marked paragraph.</mark></p>
+                <p>Normal text - <small>This is a smaller paragraph.</small></p>
+                <p>Normal text - <del>This is a deleted paragraph.</del></p>
+                <p>Normal text - <ins>This is a inserted paragraph.</ins></p>
+                <p>Normal text - <sub>This is a subscript paragraph.</sub></p>
+                <p>Normal text - <sup>This is a superscript paragraph.</sup></p>
+
+                <h2>Activity 2.6</h2>
+                <p>Modify our example from the tables section so the cell with the smallest price is marked and bold.
+                </p>
+                <table>
+                    <tr>
+                        <th>Name</th>
+                        <th>Weight (in kg)</th>
+                        <th>Price (in Euro)</th>
+                        <th>Colour</th>
+                    </tr>
+                    <tr>
+                        <td>Banana</td>
+                        <td>0.3</td>
+                        <td>2</td>
+                        <td>Yellow</td>
+                    </tr>
+                    <tr>
+                        <td>Apple</td>
+                        <td>0.1</td>
+                        <td><b>0.6</b></td>
+                        <td>Green</td>
+                    </tr>
+                    <tr>
+                        <td>Orange</td>
+                        <td>0.15</td>
+                        <td>0.8</td>
+                        <td>Orange</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="The_Task">
+                <h2>The Task</h2>
+                <p>This lesson taught us more complex HTML elements, such as buttons, images or lists.
+                    We also learned how to apply text formatting. In this task, you need to prepare a table similar to
+                    this one:</p>
+                <img src="https://core-noroff.bravais.com/api/dynamic/documentVersions/14681/files/131152/media/Back-end/Front-End%20Technologies/Images/HTMLbasics(part2)task-1.png"
+                    alt="The Task case">
+                <br>
+                <a href="../theTask/Module1/task1.2.html"><button>The page in question</button></a>
+            </div>
+        </section>
+    </main>
+    <!-- JS -->
+    <script src="/Noroff/js/jquery-3.6.0.js"></script>');
+    <script src="/Noroff/bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
+    <script src="/Noroff/js/mainNav.js"></script>
+    <script src="/Noroff/pages/forntEndTechnologies/js/frontend.js"></script>
+</body>
+<footer>
+
+</footer>
+
+</html>
