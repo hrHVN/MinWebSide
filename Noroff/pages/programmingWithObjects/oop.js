@@ -1,6 +1,5 @@
 $(document).ready(function () {
-    innsertLocalNav('/Noroff/pages/forntEndTechnologies', localNavTitles);
-    //thisPageActive();
+    innsertLocalNav('/Noroff/pages/programmingWithObjects', localNavTitles);
 });
 
 const localNavTitles = [
