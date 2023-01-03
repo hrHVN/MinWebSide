@@ -4,7 +4,7 @@ $(document).ready(function () {
 
 const localNavTitles = [
     {
-        button: 'OOP Intro', url: '/module1/index.html', subDomains: [
+        button: 'OOP-Intro', url: '/module1/index.html', subDomains: [
             { button: 'Introduction to Objects - Part 1', url: '/module1/modul1.html' },
             { button: 'Introduction to Objects - Part 2', url: '/module1/modul2.html' },
             { button: 'JSON - Part 1', url: '/module1/modul3.html' },
@@ -13,7 +13,7 @@ const localNavTitles = [
         ]
     },
     {
-        button: 'OOP Design', url: '/module2/index.html', subDomains: [
+        button: 'OOP-Design', url: '/module2/index.html', subDomains: [
             { button: 'Object-oriented design', url: '/module2/modul1.html' },
             { button: 'Functional programming - Part 1', url: '/module2/modul2.html' },
             { button: 'Functional programming - Part 2', url: '/module2/modul3.html' },

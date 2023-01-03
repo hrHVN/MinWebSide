@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS -->
+    <link rel="stylesheet" href="/Noroff/bootstrap-5.0.2-dist/css/bootstrap.min.css">
+
+    <title>Introduction to Objects - Part 1</title>
+</head>
+
+<body>
+    <main class="container-md">
+        <article class="mb-5 ">
+            <h2 class="modal-header">Lesson 1 Intro to Objects</h2>
+            <p>In JavaScript, all values, besides primitives, are Objects. Primitives are types and values such as
+                string, number, boolean, null, undefined, symbol or bigInt. However, even these can be represented as
+                Objects.</p>
+            <p>We can treat Objects as containers for data. Object properties and Object methods can store numerous
+                variables and functions.</p>
+            <p>In this lesson, we'll recall basic information about Objects, how to create them and how to access or
+                modify their properties and methods. More complex details on Objects will be presented in the next
+                lesson.</p>
+
+            <h3 class="modal-header">learning outcomes</h3>
+
+            <h6 class="modal-header">In this lesson, we are covering the following knowledge learning outcomes:</h6>
+            <ul>
+                <li>The candidate has knowledge of concepts, processes and tools in Object Orientated programming and
+                    JavaScript Object Notation.</li>
+            </ul>
+
+            <h6 class="modal-header">In this lesson, we are covering the following skill learning outcome:</h6>
+            <ul>
+                <li>The candidate masters JavaScript Object Notation techniques and styles.</li>
+            </ul>
+
+            <h6 class="modal-header">In this lesson, we are covering the following general competence learning
+                outcome:</h6>
+            <ul>
+                <li>The candidate can carry out work based on the needs of a junior JavaScript developer.</li>
+            </ul>
+            <hr>
+        </article>
+        <section class="mb-5">
+            <div class="container-fluid mb-3">
+                <h4>Activity 1</h4>
+                <p>Create an Object: matchScore with two properties: homeScore and awayScore. Both properties should be
+                    numbers. Object should also have the method homeGoal() and awayGoal(), which increments the value of
+                    the homeScore or awayScore.</p>
+
+                <button class="btn btn-secondary btn-sm" onclick="acOut()">See in Console</button>
+
+                <script>
+                    function acOut() {
+                        console.log(matchScore);
+                    };
+                    const matchScore = {
+                        homeScore: 0,
+                        awayScore: 0,
+                        homeGoal: function () {
+                            this.homeScore++;
+                        },
+                        awayGoal: function () {
+                            this.awayScore++;
+                        }
+                    };
+                </script>
+                <hr>
+            </div>
+
+            <div class="container-fluid mb-3">
+                <h4>Activity 2</h4>
+                <p>Create an empty object.</p>
+                <p>Create a website containing two buttons:</p>
+                <li>Add property - adds property named “new” to our Object, sets its value to 10 and displays the Object
+                    in the console.</li>
+                <li>Remove property - Removes the “new” property from the Objects and displays the object in the
+                    console.</li>
+                </p>
+
+                <button class="btn btn-success btn-sm" onclick="addProp()">Add</button>
+                <button class="btn btn-danger btn-sm" onclick="rmProp()">Remove</button>
+                <script>
+                    function addProp() {
+                        emptyObj.new = 10;
+                        console.log(`The empty Object: ${emptyObj.new}`);
+                        console.log(emptyObj);
+                    };
+                    function rmProp() {
+                        delete emptyObj.new;
+                        console.log(`The empty Object: ${emptyObj.new}`);
+                        console.log(emptyObj);
+                    };
+                    const emptyObj = {
+
+                    };
+                </script>
+                <hr>
+            </div>
+
+            <div class="container-fluid mb-3">
+                <h4>Activity 3</h4>
+                <p>Create an Object containing one number property called “value” and two methods: increment() and
+                    decrement(), which increments/decrements this value (adds or removes one from it). Display the value
+                    in the console logs.</p>
+                <p>Create a website containing two buttons: Increment and Decrement. Link Object methods to the button.
+                </p>
+                <button class="btn btn-primary btn-sm" onclick="ac3Obj.increment()">Increment</button>
+                <button class="btn btn-primary btn-sm" onclick="ac3Obj.decrement()">Decrement</button>
+
+                <script>
+                    const ac3Obj = {
+                        value: 0,
+                        increment: function () {
+                            this.value++;
+                            console.log(this.value);
+                        },
+                        decrement: function () {
+                            this.value--;
+                            console.log(this.value);
+                        }
+                    };
+                </script>
+                <hr>
+            </div>
+
+        </section>
+        
+        <article class="container-md mb-5">
+            <h4>The Task</h4>
+            <p>In this lesson, we learned about Object basics, such as Object properties and methods.</p>
+            <p>In this task:</p>
+            <ul class="list-group">
+                <li class="list-group-item">Create an Object containing two number properties and two methods showing
+                    the sum and multiplication of these properties in the console.
+                </li>
+                <li class="list-group-item">Create a button which acts as a user for a property name. If the provided
+                    name is the same as the name of one of the number properties, ask them for a new value for it.
+                </li>
+                <li class="list-group-item">Create two buttons and link the object method to them.
+                </li>
+            </ul>
+
+            <div class="btn-group">
+                <button class="btn btn-primary btn-sm" onclick="theTobj.modify()">Enter a value</button>
+                <button class="btn btn-primary btn-sm" onclick="theTobj.sum()">The sum</button>
+                <button class="btn btn-primary btn-sm" onclick="theTobj.multiplication()">Multiplication</button>
+            </div>
+
+            <script>
+                const theTobj = {
+                    num1: 0,
+                    num2: 0,
+                    sum: function() {
+                        console.log(this.num1 + this.num2);
+                    },
+                    multiplication: function() {
+                        console.log(this.num1 * this.num2);
+                    },
+                    modify: function(){
+                        const name = prompt('Which property would you like to modify? ("num1" or "num2"):');
+
+                        if(theTobj[name] != null) {
+                            const newValue = parseInt(prompt('Enter the new value:'));
+                            if(!isNaN(newValue)) {
+                                theTobj[name] = newValue;
+                            }
+                        }
+                    }
+                }
+            </script>
+        </article>
+    </main>
+
+    <!-- JS -->
+    <script src="/Noroff/js/jquery-3.6.0.js"></script>
+    <script src="/Noroff/bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
+    <script src="/Noroff/js/mainNav.js"></script>
+    <script src="/Noroff/pages/programmingWithObjects/oop.js"></script>
+</body>
+
+</html>
