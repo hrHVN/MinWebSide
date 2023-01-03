@@ -46,63 +46,117 @@
         <section class="mb-5">
             <div class="container-fluid mb-3">
                 <h4>Activity 1</h4>
-                <p></p>
-
-                <button class="btn btn-secondary btn-sm" onclick=""> - </button>
+                <p>Design a class for the following Object:</p>
+                <img src="../media/Introductiontotheobjects(part2)-3.png" alt="">
 
                 <script>
-
+                    class objClass {
+                        constructor(
+                            num1,
+                            num2
+                        ) {
+                            this.first = parseint(num1);
+                            this.second = parseInt(num2);
+                        }
+                        sum() {
+                            console.log(this.first + this.second);
+                        }
+                        multiplication() {
+                            console.log(this.first * this.second);
+                        }
+                    }
                 </script>
                 <hr>
             </div>
+
             <div class="container-fluid mb-3">
                 <h4>Activity 2</h4>
-                <p></p>
-
-                <button class="btn btn-secondary btn-sm" onclick=""> - </button>
+                <p>Use the Object constructor to create a type for the following Object:
+                </p>
+                <img src="../media/Introductiontotheobjects(part2)-3.png" alt="">
 
                 <script>
-
+                    function objFunc(num1, num2) {
+                        this.first = parseint(num1);
+                        this.second = parseInt(num2);
+                        this.sum = function() {
+                            console.log(this.first + this.second);
+                        }
+                        this.multiplication = function() {
+                            console.log(this.first * this.second);
+                        }
+                    }
                 </script>
                 <hr>
             </div>
-            <div class="container-fluid mb-3">
-                <h4>Activity 3</h4>
-                <p></p>
 
-                <button class="btn btn-secondary btn-sm" onclick=""> - </button>
-
-                <script>
-
-                </script>
-                <hr>
-            </div>
-            <div class="container-fluid mb-3">
-                <h4>Activity 4</h4>
-                <p></p>
-
-                <button class="btn btn-secondary btn-sm" onclick=""> - </button>
-
-                <script>
-
-                </script>
-                <hr>
-            </div>
-            <div class="container-fluid mb-3">
-                <h4>Activity 5</h4>
-                <p></p>
-
-                <button class="btn btn-secondary btn-sm" onclick=""> - </button>
-
-                <script>
-
-                </script>
-                <hr>
-            </div>
         </section>
         <article class="container-md mb-5">
             <h4>The Task</h4>
-            <p></p>
+            <p>In this lesson, we learned about more complex object details. In this task, you need to design two object templates for the following Object:</p>
+            <img src="../media/thetask_2.png" alt="">
+            <p>Using the Class and Object constructor, create a new method birth() which returns the year of the dog's birth.</p>
+
+
+            <div class="btn-group-sm">
+                <button class="btn btn-outline-primary" onclick="useClass()">Call my Class</button>
+                <button class="btn btn-outline-primary" onclick="useFunc()">Call my Function</button>
+            </div>
+            <script>
+                
+                function useFunc() {
+                    let name = prompt('What should we call this animal?');
+                    let age = prompt('How old is this animanl?');
+
+                    var callMyFunc = new animalFunc(name, age);
+
+                    console.log(callMyFunc.name);
+                    console.log(`the age is ${callMyFunc.age}, wich means ${callMyFunc.name} was born in ${callMyFunc.birth()}`);
+                    console.log(`${callMyFunc.name} says:`); 
+                    callMyFunc.bark();
+                }
+
+                function useClass () {
+                    let name = prompt('What should we call this animal?');
+                    let age = prompt('How old is this animanl?');
+
+                    var callMyClass = new annimalClass(name, age);
+
+                    console.log(callMyClass.name);
+                    console.log(`the age is ${callMyClass.age}, wich means ${callMyClass.name} was born in ${callMyClass.birth()}`);
+                    console.log(`${callMyClass.name} says:`,);
+                    callMyClass.bark();
+                }
+
+                class annimalClass {
+                    constructor(
+                        name,
+                        age
+                    ){
+                        this.name = name;
+                        this.age = parseInt(age);
+                    }
+                    bark() {
+                        console.log('Bark bark!');
+                    }
+                    birth() {
+                        let now = new Date();
+                        return now.getFullYear() - this.age;
+                    }
+                }
+
+                function animalFunc(name, age) {
+                    this.name = name;
+                    this.age = parseInt(age);
+                    this.bark = function() {
+                        console.log('Bark bark!');
+                    }
+                    this.birth = function() {
+                        let now = new Date();
+                        return now.getFullYear() - this.age;
+                    }
+                }
+            </script>
 
         </article>
     </main>
