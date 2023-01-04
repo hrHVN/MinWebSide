@@ -1,4 +1,8 @@
-import {innsertLocalNav} from '/Noroff/js/mainNav.js';
+import {innsertLocalNav} from '/js/mainNav.js';
+
+$(document).ready(function() {
+    innsertLocalNav('/pages/programmingFoundations', localNavTitles);
+});
 
 const localNavTitles = [
     {
@@ -64,6 +68,3 @@ const localNavTitles = [
 
 }
 
-$(document).ready(function() {
-    innsertLocalNav('/Noroff/programmingFoundations', localNavTitles);
-});

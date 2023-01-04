@@ -1,6 +1,6 @@
 
 $(document).ready(function () {
-    innsertLocalNav('/Noroff/pages/forntEndTechnologies', localNavTitles);
+    innsertLocalNav('/pages/forntEndTechnologies', localNavTitles);
     //thisPageActive();
 });
 

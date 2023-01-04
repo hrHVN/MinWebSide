@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    innsertLocalNav('/Noroff/pages/programmingWithObjects', localNavTitles);
+    innsertLocalNav('/pages/programmingWithObjects', localNavTitles);
 });
 
 const localNavTitles = [
