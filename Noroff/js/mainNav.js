@@ -4,17 +4,17 @@ $(document).ready(function () {
 
 function innsertMainNav() {
     const mainNavTitles = [
-        { button: 'Home', url: './index.html', active: true },
-        { button: 'JS Basic', url: '../pages/programmingFoundations/pfindex.html', active: true },
-        { button: 'Frontend', url: '../pages/forntEndTechnologies/fetindex.html', active: true },
-        { button: 'OOP', url: './pages/programmingWithObjects/pwoindex.html', active: true },
-        { button: 'Project Methodology', url: '../pages/projectMethodology/pmindex.html', active: false },
-        { button: 'Semester Project', url: '../pages/semesterProject/smindex.html', active: false },
-        { button: 'JS Servers', url: '../pages/javaScriptServers/jssindex.html', active: false },
-        { button: 'dataBases', url: '../pages/databases/dbindex.html', active: false },
-        { button: 'Rest Api', url: '../pages/restApi/raindex.html', active: false },
-        { button: 'Servers', url: '../pages/serverDeployment/sdindex.html', active: false },
-        { button: 'Exam', url: '../pages/examProject/epindex.html', active: false }
+        { button: 'Home', url: '/index.html', active: true },
+        { button: 'JS Basic', url: '/pages/programmingFoundations/pfindex.html', active: true },
+        { button: 'Frontend', url: '/pages/forntEndTechnologies/fetindex.html', active: true },
+        { button: 'OOP', url: '/pages/programmingWithObjects/pwoindex.html', active: true },
+        { button: 'Project Methodology', url: '/pages/projectMethodology/pmindex.html', active: false },
+        { button: 'Semester Project', url: '/pages/semesterProject/smindex.html', active: false },
+        { button: 'JS Servers', url: '/pages/javaScriptServers/jssindex.html', active: false },
+        { button: 'dataBases', url: '/pages/databases/dbindex.html', active: false },
+        { button: 'Rest Api', url: '/pages/restApi/raindex.html', active: false },
+        { button: 'Servers', url: '/pages/serverDeployment/sdindex.html', active: false },
+        { button: 'Exam', url: '/pages/examProject/epindex.html', active: false }
     ];
 
     //insert header
