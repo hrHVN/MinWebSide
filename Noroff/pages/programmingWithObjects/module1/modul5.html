@@ -1,20 +1,265 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- CSS -->
-        <link rel="stylesheet" href="/Noroff/bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="/Noroff/bootstrap-5.0.2-dist/css/bootstrap.min.css">
 
-        <title>Self-study - OOP</title>
-    </head>
-    <body>
-        
-        <!-- JS -->
-        <script src="/Noroff/js/jquery-3.6.0.js"></script>
-        <script src="/Noroff/bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
-        <script src="/Noroff/js/mainNav.js"></script>
-        <script src="/Noroff/pages/programmingWithObjects/oop.js"></script>
-    </body>
+    <title>Self-study - OOP</title>
+</head>
+
+<body>
+    <main class="container-md">
+        <artiicle class="mb-5">
+            <h2>The Task</h2>
+            <p>Complete a series of small tasks:</p>
+
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <p>Having the following object:</p>
+                    <img src="../media/tt_1.1.png" alt="">
+                    <p>Display the last name of the person in an alert.</p>
+
+                    <div class="btn-gruop">
+                        <button class="btn btn-primary" onclick="tt1(tt1Person)">Reveal!</button>
+                        <hr>
+                        <a href="../media/Selfstudytask1-1.png" target="_blank"><button
+                                class="btn-sm btn-outline-secondary">Solution by Noroff</button></a>
+                    </div>
+                    <script>
+                        const tt1Person = {
+                            firstName: "John",
+                            lastName: "Doe"
+                        }
+
+                        function tt1(obj) {
+                            alert(`Last name: ${obj.lastName}`)
+                        }
+                    </script>
+                </li>
+
+                <li class="list-group-item">
+                    <p>Create an object “people”, which consists of two properties, person objects, which have
+                        properties firstName and lastName (both Strings).</p>
+                    <img src="" alt="">
+
+                    <div class="btn-gruop">
+                        <button class="btn btn-primary" onclick="tt2Person.reveal()">Reveal!</button>
+                        <hr>
+                        <a href="../media/Selfstudytask1-2.png" target="_blank"><button
+                                class="btn-sm btn-outline-secondary">Solution by Noroff</button></a>
+                    </div>
+                    <script>
+
+                        const tt2Person = {
+                            person1: {
+                                firstName: "John",
+                                lastName: "Doe"
+                            },
+                            person2: {
+                                firstName: "Typhus",
+                                lastName: "It's Serious"
+                            },
+                            reveal: function () {
+                                alert(`${this.person2.firstName} ${this.person2.lastName}`);
+                            }
+                        }
+                    </script>
+                </li>
+
+                <li class="list-group-item">
+                    <p>Create a “person” object with name = John, surname = Doe and age = 50.</p>
+                    <p>Access the object and display all the properties in an alert.</p>
+                    <img src="" alt="">
+
+                    <div class="btn-gruop">
+                        <button class="btn btn-primary" onclick="tt3Person.reveal()">Reveal!</button>
+                        <hr>
+                        <a href="../media/Selfstudytask1-3.png" target="_blank"><button
+                                class="btn-sm btn-outline-secondary">Solution by Noroff</button></a>
+                    </div>
+                    <script>
+                        const tt3Person = {
+                            name: "John",
+                            surname: "Doe",
+                            age: 50,
+                            reveal: function () {
+                                alert(`Name: ${this.name} \nSurname: ${this.surname} \nAge: ${this.age}`)
+                            }
+                        };
+                    </script>
+                </li>
+
+                <li class="list-group-item">
+                    <p>Design a template for the following object:</p>
+                    <img src="../media/tt_1.4.png" alt="">
+                    <p>using class.</p>
+
+                    <div class="btn-gruop">
+                        <button class="btn btn-primary" onclick="tt4.cast()">Reveal!</button>
+                        <hr>
+                        <a href="../media/Selfstudytask1-4.png" target="_blank"><button
+                                class="btn-sm btn-outline-secondary">Solution by Noroff</button></a>
+                    </div>
+                    <script>
+                        class tt4Book {
+                            constructor(
+                                title,
+                                releaseYear,
+                                author
+                            ) {
+                                this.title = title;
+                                this.releaseYear = releaseYear;
+                                this.author = author;
+                            }
+                            cast() {
+                                return alert("Avada Kedavra");
+                            }
+                        };
+                        let tt4 = new tt4Book("title", 2022, "me");
+                    </script>
+                </li>
+
+                <li class="list-group-item">
+                    <p>Design a template for the following object:</p>
+                    <img src="../media/tt_1.5.png" alt="">
+                    <p>using an object constructor.</p>
+
+                    <div class="btn-gruop">
+                        <button class="btn btn-primary" onclick="tt5Book.cast()">Reveal!</button>
+                        <hr>
+                        <a href="../media/Selfstudytask1-5.png" target="_blank"><button
+                                class="btn-sm btn-outline-secondary">Solution by Noroff</button></a>
+                    </div>
+                    <script>
+                        function tt5Func(
+                            title,
+                            releaseYear,
+                            author
+                        ) {
+                            this.title = title;
+                            this.releaseYear = releaseYear;
+                            this.author = author;
+                            this.cast = function () {
+                                return alert("Avada Kedavra!");
+                            }
+                        };
+
+                        let tt5Book = new tt5Func("func", 2022, "me");
+                    </script>
+                </li>
+
+                <li class="list-group-item">
+                    <p>Create a JSON Schema for the following object:</p>
+                    <img src="../media/tt_1.6.png" alt="">
+
+                    <div class="btn-gruop">
+                        <button class="btn btn-primary" onclick="tt6Reveal()">Reveal!</button>
+                        <hr>
+                        <a href="../media/Selfstudytask1-6.png" target="_blank"><button
+                                class="btn-sm btn-outline-secondary">Solution by Noroff</button></a>
+                    </div>
+                    <script>
+                        function tt6Reveal() {
+                            console.log(tt6Schema);
+                            alert("see the console");
+                        }
+                        const tt6Schema = {
+                            "$schema": "http://json-schema.org/draft-07/schema#",
+                            "$id": "http://example.com/example.json",
+                            "type": "object",
+                            "properties": {
+                                "title": {
+                                    "type": "string"
+                                },
+                                "releaseYear": {
+                                    "type": "integer"
+                                },
+                                "author": {
+                                    "type": "string"
+                                },
+                                "spells": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "string"
+                                    }
+                                },
+                            }
+                        }
+                    </script>
+                </li>
+
+                <li class="list-group-item">
+                    <p>Convert the following object to a JSON. Display it in the console with proper indents. Convert it
+                        back to the JavaScript object and display it in the console.</p>
+                    <img src="../media/tt_1.7.png" alt="">
+
+                    <div class="btn-gruop">
+                        <button class="btn btn-primary" onclick="tt7Converter()">Reveal!</button>
+                        <hr>
+                        <a href="../media/Selfstudytask1-7.png" target="_blank"><button
+                                class="btn-sm btn-outline-secondary">Solution by Noroff</button></a>
+                    </div>
+                    <script>
+                        const tt7Obj = {
+                            title: "Harry Potter",
+                            releaseYear: 1997,
+                            author: "J.K. Rowling"
+                        }
+
+                        function tt7Converter() {
+                            let toJoson = JSON.stringify(tt7Obj, null, 3);
+                            console.log(toJoson);
+
+                            let andBack = JSON.parse(toJoson);
+                            console.log(andBack);
+                        }
+                    </script>
+                </li>
+
+                <li class="list-group-item">
+                    <p>Check the number of properties in the following objects:</p>
+                    <img src="../media/tt_1.8.png" alt="">
+                    <p>Check which of these are empty objects.</p>
+                    <div class="btn-gruop">
+                        <button class="btn btn-primary" onclick="tt8Reveal()">Reveal!</button>
+                        <hr>
+                        <a href="../media/Selfstudytask1-8.png" target="_blank"><button
+                                class="btn-sm btn-outline-secondary">Solution by Noroff</button></a>
+                    </div>
+                    <script>
+                        const o1 = new Date();
+                        const o2 = new String();
+                        const o3 = new Number();
+                        const o4 = {};
+
+                        const testData = (data) => {
+                            if(Object.keys(data).length === 0 && data.constructor === Object) {
+                                console.log("Empty Object:", data);
+                            } else {
+                                console.log("Not an empty object:", data);
+                            }
+                        }
+
+                        function tt8Reveal(){
+                            alert("Open the console with F12")
+                            for (data of [o1,o2,o3,o4]) {
+                                testData(data);
+                            }
+                        }
+                    </script>
+                </li>
+            </ul>
+        </artiicle>
+    </main>
+    <!-- JS -->
+    <script src="/Noroff/js/jquery-3.6.0.js"></script>
+    <script src="/Noroff/bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
+    <script src="/Noroff/js/mainNav.js"></script>
+    <script src="/Noroff/pages/programmingWithObjects/oop.js"></script>
+</body>
+
 </html>

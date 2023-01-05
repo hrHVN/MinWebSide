@@ -50,35 +50,43 @@
         <section class="mb-5">
             <div class="container-fluid mb-3">
                 <h4>Activity 1</h4>
-                <p></p>
+                <p>This lesson was provided by Sasha Vodnik, with Linkedin learning <a
+                        href="https://www.linkedin.com/learning/json-essential-training/the-essentials-of-using-json?autoplay=true&resume=false&u=43268076">Link</a>
+                </p>
+                <p>Resources: <a href="https://goessner.net/download/prj/jsonxml/">json2xml</a></p>
                 <script>
                     const cleanData = rawData => rawData.slice(9);
                     const data = JSON.parse(cleanData(protectedData));
                 </script>
                 <hr>
             </div>
-
-            <div class="container-fluid mb-3">
-                <h4>Activity 1</h4>
-                <p></p>
-
-                <hr>
-            </div>
-            
-            <div class="container-fluid mb-3">
-                <h4>Activity 1</h4>
-                <p></p>
-
-                <hr>
-            </div>
         </section>
 
         <article class="container-md mb-5">
             <h4>The Task</h4>
-            <p>In this lesson, we learned about standard JSON basics. You must create a JSON based on the JavaScript object in this task.</p>
+            <p>In this lesson, we learned about standard JSON basics. You must create a JSON based on the JavaScript
+                object in this task.</p>
             <img src="/Noroff/pages/programmingWithObjects/media/thetask3.png" alt="">
             <p>Display the JSON in the console.</p>
-            <p>Convert the JSON to the XML using the json2xml() method in the jsonxml library and display it in the console.</p>
+            <p>Convert the JSON to the XML using the json2xml() method in the jsonxml library and display it in the
+                console.</p>
+            <button class="btn btn-sm btn-outline-primary" onclick="displayJson(myJson)">Result</button>
+            <script>
+                const myJson = {
+                    name: 'John',
+                    age: 30,
+                    car: 'null'
+                };
+
+                function displayJson(notAJson) {
+                    alert('Press F12 to see the out put');
+                    const transform = JSON.stringify(notAJson);
+                    console.log(transform);
+
+                    let toXml = json2xml(eval(notAJson));
+                    console.log(toXml);
+                }
+            </script>
         </article>
     </main>
 
@@ -87,6 +95,8 @@
     <script src="/Noroff/bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
     <script src="/Noroff/js/mainNav.js"></script>
     <script src="/Noroff/pages/programmingWithObjects/oop.js"></script>
+    <script src="/Noroff/js/json2xml.js"></script>
+    <script src="/Noroff/js/xml2json.js"></script>
 </body>
 
 </html>

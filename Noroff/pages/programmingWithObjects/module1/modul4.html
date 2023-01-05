@@ -1,20 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- CSS -->
-        <link rel="stylesheet" href="/Noroff/bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="/Noroff/bootstrap-5.0.2-dist/css/bootstrap.min.css">
 
-        <title>JSON - Part 2</title>
-    </head>
-    <body>
-        
-        <!-- JS -->
-        <script src="/Noroff/js/jquery-3.6.0.js"></script>
-        <script src="/Noroff/bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
-        <script src="/Noroff/js/mainNav.js"></script>
-        <script src="/Noroff/pages/programmingWithObjects/oop.js"></script>
-    </body>
+    <title>JSON - Part 2</title>
+</head>
+
+<body>
+    <main class="container-md">
+
+        <article class="mb-5 ">
+            <h2 class="modal-header">JSON - Part 2</h2>
+            <p>In the previous lesson, we learned about JSON basics. We already know how to create JSON objects, why
+                they
+                are important and how to convert them to other data types. This lesson will focus on more advanced
+                details,
+                such as various types and conventions of creating JSONs.
+            </p>
+            <p>Working with JSON objects isn't always easy. They can be enormous and organised differently than we
+                expect.
+                JSON Schema is a standard for creating schemas which work as JSON object's documentation. We'll learn
+                how to
+                create and generates our own schemas.</p>
+            <p>The last topic we'll learn about in this lesson is JSON for Linked Data (JSON-LD). This is based on the
+                JSON
+                format but adds more rules, so data is organised better. Since this format is prevalent, there's a
+                significant chance that external JSON objects will also be in this format.</p>
+
+            <h3 class="modal-header">learning outcomes</h3>
+
+            <h6 class="modal-header">In this lesson, we are covering the following knowledge learning outcomes:</h6>
+            <ul>
+                <li>The candidate has knowledge of concepts, processes and tools in Object Orientated programming and
+                    JavaScript Object Notation.</li>
+            </ul>
+
+            <h6 class="modal-header">In this lesson, we are covering the following skill learning outcome:</h6>
+            <ul>
+                <li>The candidate masters JavaScript Object Notation techniques and styles.</li>
+            </ul>
+
+            <h6 class="modal-header">In this lesson, we are covering the following general competence learning
+                outcome:</h6>
+            <ul>
+                <li>The candidate can carry out work based on the needs of a junior JavaScript developer.</li>
+            </ul>
+            <hr>
+        </article>
+
+        <section class="mb-5">
+            <div class="container-fluid mb-3">
+                <h4>Activity 1</h4>
+                <p>This lesson was provided by Sasha Vodnik, with Linkedin learning <a
+                        href="https://www.linkedin.com/learning/json-essential-training/the-essentials-of-using-json?autoplay=true&resume=false&u=43268076">Link</a>
+                </p>
+                <p>Resources: <a href="https://www.JSONSchema.Net">JSONSchema.Net</a></p>
+
+                <script>
+                    var productSchema = {
+                        "$schema": "http://json-schema.org/draft-07/schema#",
+                        "$id": "http://hplussport.com/schemas/products.json",
+                        "title": "h+ sports products",
+                        "description": "schema for h+ sport product data",
+                        "type": "array",
+                        "items": {
+                            "type": "objects",
+                            "properties": {
+                                "id": {
+                                    "type": "string"
+                                },
+                                "name": {
+                                    "type": "string"
+                                },
+                                "description": {
+                                    "type": "string"
+                                },
+                                "image_title": {
+                                    "type": "string"
+                                },
+                                "image": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "id", "name", "description", "image_title", "image"
+                            ]
+                        }
+                    };
+
+                </script>
+                <hr>
+            </div>
+
+            <article class="container-md mb-5">
+                <h4>The Task</h4>
+                <p>This lesson taught us complex information about JSON, such as JSON Schemas and JSON-LD.</p>
+                <p>In this task, you need to create a JSON Schema for the following object:</p>
+                <img src="../media/thetask4.png" alt="">
+                <p>Each property is required.</p>
+                <p>Try to create the schema yourself and then check the schema generated by https://www.jsonschema.net.
+                    Compare them.</p>
+
+                <script>
+                    const jsonData = {
+                        "checked": false,
+                        "dimensions": {
+                            "width": 5,
+                            "height": 10
+                        },
+                        "id": 1,
+                        "name": "A green door",
+                        "price": 12.5,
+                        "tags": [
+                            "home",
+                            "green"
+                        ]
+                    }
+
+                    const schema = {
+                        "$schema": "http://json-schema.org/draft-07/schema#",
+                        "$id": "http://example.com/example.json",
+                        "type": "object",
+                        "properties": {
+                            "checked": {
+                                "type": "boolean"
+                            },
+                            "dimensions": {
+                                "type": "object"
+                            },
+                            "id": {
+                                "type": "integer"
+                            },
+                            "name": {
+                                "type": "string"
+                            },
+                            "price": {
+                                "type": "number"
+                            },
+                            "tags": {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": ["checked","dimensions","id","name","price","tags"]
+                        }
+                    }
+                </script>
+            </article>
+        </section>
+    </main>
+    <!-- JS -->
+    <script src="/Noroff/js/jquery-3.6.0.js"></script>
+    <script src="/Noroff/bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
+    <script src="/Noroff/js/mainNav.js"></script>
+    <script src="/Noroff/pages/programmingWithObjects/oop.js"></script>
+</body>
+
 </html>
