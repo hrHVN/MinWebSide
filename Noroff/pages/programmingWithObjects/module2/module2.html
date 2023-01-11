@@ -1,19 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- CSS -->
-        <link rel="stylesheet" href="/Noroff/bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="/Noroff/bootstrap-5.0.2-dist/css/bootstrap.min.css">
 
-        <title>Functional programming - Part 1</title>
-    </head>
-    <body>
-        
-        <!-- JS -->
-        <script src="/Noroff/js/jquery-3.6.0.js"></script>
-        <script src="/Noroff/js/mainNav.js"></script>
-        <script src="/Noroff/pages/programmingWithObjects/oop.js"></script>
-    </body>
+    <title>Functional programming - Part 1</title>
+</head>
+
+<body>
+    <article class="mb-5 ">
+        <h2 class="modal-header">Lesson 1 Intro to Objects</h2>
+        <p>In JavaScript, all values, besides primitives, are Objects. Primitives are types and values such as
+            string, number, boolean, null, undefined, symbol or bigInt. However, even these can be represented as
+            Objects.</p>
+        <p>We can treat Objects as containers for data. Object properties and Object methods can store numerous
+            variables and functions.</p>
+        <p>In this lesson, we'll recall basic information about Objects, how to create them and how to access or
+            modify their properties and methods. More complex details on Objects will be presented in the next
+            lesson.</p>
+
+        <h3 class="modal-header">learning outcomes</h3>
+
+        <h6 class="modal-header">In this lesson, we are covering the following knowledge learning outcomes:</h6>
+        <ul>
+            <li>The candidate has knowledge of concepts, processes and tools in Object Orientated programming and
+                JavaScript Object Notation.</li>
+        </ul>
+
+        <h6 class="modal-header">In this lesson, we are covering the following skill learning outcome:</h6>
+        <ul>
+            <li>The candidate masters JavaScript Object Notation techniques and styles.</li>
+        </ul>
+
+        <h6 class="modal-header">In this lesson, we are covering the following general competence learning
+            outcome:</h6>
+        <ul>
+            <li>The candidate can carry out work based on the needs of a junior JavaScript developer.</li>
+        </ul>
+        <hr>
+    </article>
+    <section class="mb-5">
+        <div class="container-fluid mb-3">
+            <h4>Activity 1</h4>
+            <p>Think about how to resolve the problem in the following line:</p>
+            <img src="../media/Functionalprogramming(part1)-1.png" alt="">
+            <a href="" target="_blank"><img src="../media/Functionalprogramming(part1)-2.jpg" alt="">Reveal</a>
+            <br>
+            <p>Implement a function that returns a function adding a specified string to the input parameters.</p>
+            <a href="" target="_blank"><img src="../media/Functionalprogramming(part1)-3.jpg" alt="">Reveal</a>
+            <hr>
+            <script>
+                const functionsArray = [
+                    triple,
+                    addFour,
+                    subtractThree,
+                    double,
+                    Math.sqrt,
+                ];
+                const getNumber = function (index, currentResult, array) {
+                    if (index == 0) {
+                        return array[index](currentResult);
+                    }
+                    return array[index](getNumber(index - 1, currentResult, array));
+                }
+
+                getNumber(functionsArray.length - 1, 10, functionsArray);
+
+                const addString = y => x => x + y;
+
+                const add2 = addString('2');
+                const add3 = addString('3');
+                const add4 = addString('4');
+
+                add2('text');
+            </script>
+        </div>
+
+        <div class="container-fluid mb-3">
+            <h4>The Task</h4>
+            <p>In this lesson, we learned about functional programming basics.
+            </p>
+            <p>Using closures, you need to implement an object with one private property: “textToAdd”. Implement its
+                getters and setters. The object should contain one function - generateText(). This function should take
+                a string parameter (for the sake of naming - variable x) and return a function that also takes a string
+                parameter (variable y).
+            </p>
+            <p>The final function should return a string containing x at the beginning, textToAdd in between, and y at
+                the end, as shown in an example below:
+            </p>
+            <img src="../media/Functionalprogramming(part1)task-1.png" alt="">
+
+            <script>
+                const TextGenerator = ({textToAdd}) => {
+                    var _textToAdd = textToAdd;
+                    return {
+                        generateText: x => y => x + _textToAdd + y,
+                        setTextToAdd: newTextToAdd => _textToAdd = newTextToAdd,
+                    }
+                };
+
+                const tg = TextGenerator({textToAdd: '......'});
+                const fun = tg.generateText('First Text');
+                
+                console.log(fun('Second Text'));
+                tg.setTextToAdd('^__^');
+                console.log(fun('Second Text'));
+
+            </script>
+        </div>
+    </section>
+    <!-- JS -->
+    <script src="/Noroff/js/jquery-3.6.0.js"></script>
+    <script src="/Noroff/js/mainNav.js"></script>
+    <script src="/Noroff/pages/programmingWithObjects/oop.js"></script>
+</body>
+
 </html>
